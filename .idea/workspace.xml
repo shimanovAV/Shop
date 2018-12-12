@@ -7,88 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a3362a7-ab46-4813-b3c1-91f8e65d6cb1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Shop_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/ba74fccb-ad94-4ba5-b337-025ba40ab3a1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_47.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shop.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internetshop/users.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/META-INF/Shop.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/controller/Controller.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/controller/command/Command.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/controller/command/CommandException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/controller/command/CommandName.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/controller/command/CommandProvider.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/controller/command/Registration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/controller/command/SignIn.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/dao/ConnectorDB.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/dao/DAOException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/dao/DAOFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/dao/DataBaseHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/dao/SQLUserDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/dao/UserDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/entity/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/service/ClientService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/service/ClientServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/service/ServiceException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/service/ServiceFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/errorpage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/homepage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.47.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/registrationpage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Shop/META-INF/Shop.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/controller/Controller.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/controller/command/Command.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/controller/command/CommandException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/controller/command/CommandName.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/controller/command/CommandProvider.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/controller/command/Registration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/controller/command/SignIn.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/dao/ConnectorDB.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/dao/DAOException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/dao/DAOFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/dao/DataBaseHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/dao/SQLUserDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/dao/UserDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/entity/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/service/ClientService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/service/ClientServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/service/ServiceException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/service/ServiceFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/CommandException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/CommandName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/CommandProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/Registration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/SignIn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/dao/ConnectorDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/dao/DAOException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/dao/DAOFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/dao/DataBaseHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/dao/SQLUserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/dao/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/service/ClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/service/ClientServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/service/ServiceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/service/ServiceFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/errorpage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/homepage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/registrationpage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -111,116 +30,45 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="internetshop" type="feb32156:DbDataSourceImpl" />
+        <item name="shop" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="internetshop" type="feb32156:DbDataSourceImpl" />
+        <item name="shop" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="internetshop" type="feb32156:DbDataSourceImpl" />
+        <item name="shop" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="internetshop: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="shop_schema: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="shop" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="shop_schema: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="users: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/by/etc/shop/dao/SQLUserDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/by/etc/shop/dao/DataBaseHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1764">
-              <caret line="89" selection-start-line="89" selection-end-line="89" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/by/etc/shop/service/ClientServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/web/css/mainpage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="78">
+              <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/command/Registration.java">
+        <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/errorpage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/homepage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="777">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/command/SignIn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="12" column="64" selection-start-line="11" selection-start-column="4" selection-end-line="12" selection-end-column="64" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -230,8 +78,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -264,19 +113,30 @@
         <option value="$PROJECT_DIR$/internetshop/internetshop.properties" />
         <option value="$PROJECT_DIR$/src/by/etc/shop/dao/database.properties" />
         <option value="$PROJECT_DIR$/web/WEB-INF/registrationpage.jsp" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/src/by/etc/shop/dao/ConnectorDB.java" />
-        <option value="$PROJECT_DIR$/src/by/etc/shop/dao/DataBaseHelper.java" />
         <option value="$PROJECT_DIR$/src/by/etc/shop/service/ClientServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/by/etc/shop/dao/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/by/etc/shop/service/ClientService.java" />
-        <option value="$PROJECT_DIR$/src/by/etc/shop/dao/SQLUserDAO.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/homepage.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/errorpage.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/by/etc/shop/controller/Controller.java" />
-        <option value="$PROJECT_DIR$/src/by/etc/shop/controller/command/SignIn.java" />
         <option value="$PROJECT_DIR$/src/by/etc/shop/controller/command/Registration.java" />
+        <option value="$PROJECT_DIR$/src/by/etc/shop/dao/SQLUserDAO.java" />
+        <option value="$PROJECT_DIR$/src/by/etc/shop/controller/command/SignIn.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/context.xml" />
+        <option value="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/META-INF/context.xml" />
+        <option value="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/context.xml" />
+        <option value="$PROJECT_DIR$/src/by/etc/shop/dao/ConnectorDB.java" />
+        <option value="C:/Program Files/Apache Software Foundation/Tomcat 8.5/conf/context.xml" />
+        <option value="$PROJECT_DIR$/src/by/etc/shop/dao/ConectionPool.java" />
+        <option value="$PROJECT_DIR$/web/META_INF/context.xml" />
+        <option value="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/by/etc/shop/dao/ConnectionPool.java" />
+        <option value="$PROJECT_DIR$/src/by/etc/shop/dao/DataBaseHelper.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/web/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/web/css/bootstrap-reboot.css" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/web/css/mainpage.css" />
       </list>
     </option>
   </component>
@@ -288,10 +148,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="153" />
-    <option name="y" value="58" />
-    <option name="width" value="1400" />
-    <option name="height" value="962" />
+    <option name="x" value="976" />
+    <option name="y" value="14" />
+    <option name="width" value="838" />
+    <option name="height" value="986" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -329,34 +189,24 @@
               <item name="Shop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Shop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Shop" type="b2602c69:ProjectViewProjectNode" />
               <item name="Shop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Shop" type="b2602c69:ProjectViewProjectNode" />
               <item name="Shop" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shop" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Shop" type="b2602c69:ProjectViewProjectNode" />
@@ -372,24 +222,34 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543959886405" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544574123887" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.47.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-5.1.47-bin.jar!/" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Shop\src\by\etc\shop\dao" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Shop" />
-      <recent name="E:\Shop\src\by\etc\shop\dao" />
       <recent name="E:\Shop\web" />
+      <recent name="E:\Shop\web\WEB-INF" />
+      <recent name="E:\Shop\web\WEB-INF\lib" />
+      <recent name="E:\Shop\web\META_INF" />
+      <recent name="G:\Shop\out\artifacts\Shop_war_exploded\WEB-INF\classes\META-INF" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Shop\web\WEB-INF" />
+      <recent name="E:\Shop\web" />
+      <recent name="E:\Shop\src\by\etc\shop\dao" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -562,18 +422,25 @@
       <workItem from="1543843576647" duration="34000" />
       <workItem from="1543863543731" duration="18549000" />
       <workItem from="1543911947337" duration="37635000" />
-      <workItem from="1544102309595" duration="1562000" />
+      <workItem from="1544102309595" duration="2151000" />
+      <workItem from="1544128136772" duration="3594000" />
+      <workItem from="1544160757842" duration="322000" />
+      <workItem from="1544285594743" duration="3223000" />
+      <workItem from="1544293897305" duration="1033000" />
+      <workItem from="1544297080511" duration="8916000" />
+      <workItem from="1544370111985" duration="24517000" />
+      <workItem from="1544551719058" duration="16493000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66186000" />
+    <option name="totallyTimeSpent" value="124873000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1698" height="1020" extended-state="6" />
+    <frame x="-6" y="-6" width="973" height="513" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19173859" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3114754" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -583,8 +450,8 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.27953216" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4608187" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.11488251" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.14564832" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -592,23 +459,23 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32982457" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3285968" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="bottom" id="Database Console" order="15" weight="0.30760235" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.30718955" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.12823674" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.048087433" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18865599" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2680162" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -618,8 +485,8 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27953216" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4608187" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.106571935" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4955595" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -627,18 +494,18 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32982457" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3285968" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="bottom" id="Database Console" order="15" weight="0.30760235" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.30718955" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.12885326" />
+      <window_info anchor="right" id="Database" order="6" weight="0.051012147" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout-to-restore>
@@ -650,54 +517,15 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/by/etc/shop/controller/Controller.java</url>
-          <line>35</line>
+          <url>file://$PROJECT_DIR$/src/by/etc/shop/dao/ConnectorDB.java</url>
+          <line>21</line>
           <properties />
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/by/etc/shop/dao/SQLUserDAO.java</url>
-          <line>45</line>
-          <properties />
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/by/etc/shop/dao/DataBaseHelper.java</url>
-          <line>78</line>
-          <properties />
-          <option name="timeStamp" value="32" />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/by/etc/shop/dao/DAOFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#313#314#0" expanded="true" />
-            <element signature="e#344#345#0" expanded="true" />
-            <element signature="e#444#445#0" expanded="true" />
-            <element signature="e#478#479#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/etc/shop/service/ServiceException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-          <folding>
-            <element signature="e#167#168#0" expanded="true" />
-            <element signature="e#190#191#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/internetshop/users.ibd">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/by/etc/shop/service/ServiceFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -735,30 +563,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c4a206b9-928f-44b6-b616-a8c36ae469ca/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" selection-start-column="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/be8695a2-6eb3-43e5-b223-a74fe5a7a5ce/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2200ca04-5d03-4a3e-a906-dd4b154761b5/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/21206ca6-8cd1-4cfb-a2e2-fd8f24ff4487/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c4a206b9-928f-44b6-b616-a8c36ae469ca/console.sql" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/be8695a2-6eb3-43e5-b223-a74fe5a7a5ce/console.sql" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2200ca04-5d03-4a3e-a906-dd4b154761b5/console.sql" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/21206ca6-8cd1-4cfb-a2e2-fd8f24ff4487/console.sql" />
     <entry file="das://21206ca6-8cd1-4cfb-a2e2-fd8f24ff4487/schema/mysql/table/table_name" />
     <entry file="das://4e5c89a3-60fb-478e-86df-6e1cd006676f/schema/performance_schema/table/accounts" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e5c89a3-60fb-478e-86df-6e1cd006676f/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ba74fccb-ad94-4ba5-b337-025ba40ab3a1/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e5c89a3-60fb-478e-86df-6e1cd006676f/console.sql" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ba74fccb-ad94-4ba5-b337-025ba40ab3a1/console.sql" />
     <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/command/Command.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -786,50 +598,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/etc/shop/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="20" column="79" selection-start-line="20" selection-start-column="79" selection-end-line="20" selection-end-column="79" />
-          <folding>
-            <element signature="e#476#477#0" expanded="true" />
-            <element signature="e#501#502#0" expanded="true" />
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#567#568#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#662#663#0" expanded="true" />
-            <element signature="e#693#694#0" expanded="true" />
-            <element signature="e#725#726#0" expanded="true" />
-            <element signature="e#753#754#0" expanded="true" />
-            <element signature="e#795#796#0" expanded="true" />
-            <element signature="e#829#830#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database.properties" />
     <entry file="file://$PROJECT_DIR$/src/by/etc/shop/dao/database.properties" />
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/registrationpage.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="398">
           <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/etc/shop/dao/ConnectorDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -847,33 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://ba74fccb-ad94-4ba5-b337-025ba40ab3a1/schema/internetshop/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/etc/shop/dao/SQLUserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/etc/shop/dao/DataBaseHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1764">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/command/Registration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
@@ -884,51 +631,170 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/etc/shop/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="79" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3b192c65-627c-44fd-9a81-9505985e0e7c/console.sql" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/292c3219-9a15-4aad-8fa1-afd8145dd513/console.sql" />
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/errorpage.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
+        <state relative-caret-position="221">
           <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/homepage.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
+        <state relative-caret-position="68">
           <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="777">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        <state relative-caret-position="493">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/command/SignIn.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="12" column="64" selection-start-line="11" selection-start-column="4" selection-end-line="12" selection-end-column="64" />
+        <state relative-caret-position="221">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="das://ba74fccb-ad94-4ba5-b337-025ba40ab3a1/schema/internetshop/table/users" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/127052b1-20c1-4ad3-8afe-1bd462196a8f/console.sql" />
+    <entry file="das://127052b1-20c1-4ad3-8afe-1bd462196a8f/schema/shop/table/users" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4b015854-78f4-48aa-ae69-4b3f988ce5f2/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/context.xml" />
+    <entry file="file://C:/Program Files/Apache Software Foundation/Tomcat 8.5/webapps/docs/config/context.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/context.xml" />
+    <entry file="file://C:/Program Files/Apache Software Foundation/Tomcat 8.5/conf/context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/by/etc/shop/service/ClientServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="714">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/Shop_war_exploded/context.xml" />
+    <entry file="file://$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/lib/context.xml" />
+    <entry file="file://$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/META_INF/context.xml" />
+    <entry file="file://$PROJECT_DIR$/src/by/etc/shop/dao/SQLUserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/etc/shop/dao/DataBaseHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/etc/shop/dao/ConnectionPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://4b015854-78f4-48aa-ae69-4b3f988ce5f2/schema/shop_schema/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/etc/shop/dao/ConnectorDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/internetshop/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="25" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="163" column="10" lean-forward="true" selection-start-line="163" selection-start-column="10" selection-end-line="163" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/bootstrap-reboot.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="140" column="17" selection-start-line="140" selection-start-column="17" selection-end-line="140" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/mainpage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -951,7 +817,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Web</last-edited>
+          <last-edited>Web (Shop)|Web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

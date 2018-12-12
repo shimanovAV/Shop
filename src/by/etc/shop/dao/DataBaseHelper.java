@@ -1,6 +1,5 @@
 package by.etc.shop.dao;
 import by.etc.shop.entity.User;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -12,19 +11,15 @@ public class DataBaseHelper {
     private String query;
 
     public DataBaseHelper() throws DAOException {
-        try{
-        connect = ConnectorDB.getConnection();}
-        catch(SQLException|ClassNotFoundException e){
-            throw new DAOException(e);
-        }
+            ConnectionPool pool = ConnectionPool.POOL.createPool();
+        connect = pool.getConnection();
     }
 
+
     public DataBaseHelper(String query) throws DAOException{
-        try{
-        connect = ConnectorDB.getConnection();
-        this.query = query;} catch(SQLException|ClassNotFoundException e){
-            throw new DAOException(e);
-        }
+            ConnectionPool pool = ConnectionPool.POOL.createPool();
+            connect = pool.getConnection();
+        this.query = query;
     }
 
     public PreparedStatement getPreparedStatement() throws DAOException{

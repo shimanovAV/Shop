@@ -10,6 +10,8 @@
         <element id="directory" name="lib">
           <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.5/webapps/examples/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" />
           <element id="file-copy" path="C:/Program Files/Apache Software Foundation/Tomcat 8.5/webapps/examples/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.47" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.47-bin" />
         </element>
       </element>
     </root>
