@@ -1,4 +1,4 @@
-package by.etc.shop.dao;
+package by.etc.shop.dao.connector;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -18,11 +18,11 @@ public enum ConnectionPool {
         private static final String PASSWORD = "iratar07";
     public static final String PATH_TO_DRIVER = "com.mysql.jdbc.Driver";
 
-        public ConnectionPool createPool() {
+        public ConnectionPool createPool() throws ConnectionException {
             try{
             Class.forName(PATH_TO_DRIVER);}
             catch(ClassNotFoundException e){
-                e.printStackTrace();
+                throw new ConnectionException();
             }
             activePool= new ArrayBlockingQueue<Connection>(POOL_SIZE, true);
             passivePool = new ArrayBlockingQueue<Connection>(POOL_SIZE, true);
@@ -30,45 +30,45 @@ public enum ConnectionPool {
                 try {
                     passivePool.add(DriverManager.getConnection(URL, USER, PASSWORD));
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                    throw new ConnectionException();
                 }
             }
             return this;
         }
 
-        public Connection getConnection() {
+        public Connection getConnection() throws ConnectionException {
             Connection connection = null;
             try {
                 connection = passivePool.take();
                 activePool.put(connection);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                throw new ConnectionException();
             }
             return connection;
         }
 
-        public void deleteConnection(Connection connection){
+        public void deleteConnection(Connection connection)throws ConnectionException{
             activePool.remove(connection);
             try {
                 passivePool.put(connection);
             } catch (InterruptedException e){
-
+                throw new ConnectionException();
             }
         }
 
-        public void closeConnections(Connection connection) {
+        public void closeConnections(Connection connection)throws ConnectionException {
             while ((connection = passivePool.poll())!=null){
                 try {
                     connection.close();
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                    throw new ConnectionException();
                 }
             }
             while ((connection = activePool.poll())!=null){
                 try {
                     connection.close();
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                    throw new ConnectionException();
                 }
             }
         }

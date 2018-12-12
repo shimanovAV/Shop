@@ -1,9 +1,11 @@
-package by.etc.shop.dao;
+package by.etc.shop.dao.user;
+import by.etc.shop.dao.DAOException;
+import by.etc.shop.dao.DataBaseHelper;
 import by.etc.shop.entity.User;
 
 import java.sql.*;
 
-public class SQLUserDAO implements UserDAO{
+public class SQLUserDAO implements UserDAO {
     public static final String SELECT_ALL = "select * from users";
     public static final String INCERT_ALL_FIELDS = "INSERT INTO users(username, login, password, email ) VALUES(?,?,?,?)";
     DataBaseHelper helper = null;

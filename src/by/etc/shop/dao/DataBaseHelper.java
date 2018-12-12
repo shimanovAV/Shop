@@ -1,4 +1,6 @@
 package by.etc.shop.dao;
+import by.etc.shop.dao.connector.ConnectionException;
+import by.etc.shop.dao.connector.ConnectionPool;
 import by.etc.shop.entity.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,15 +13,24 @@ public class DataBaseHelper {
     private String query;
 
     public DataBaseHelper() throws DAOException {
+        try {
             ConnectionPool pool = ConnectionPool.POOL.createPool();
-        connect = pool.getConnection();
+            connect = pool.getConnection();
+        }catch(ConnectionException e){
+            throw new DAOException(e);
+        }
+
     }
 
 
     public DataBaseHelper(String query) throws DAOException{
+        try{
             ConnectionPool pool = ConnectionPool.POOL.createPool();
             connect = pool.getConnection();
-        this.query = query;
+        this.query = query;}
+        catch(ConnectionException e){
+            throw new DAOException(e);
+        }
     }
 
     public PreparedStatement getPreparedStatement() throws DAOException{

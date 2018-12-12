@@ -2,7 +2,7 @@ package by.etc.shop.service;
 
 import by.etc.shop.dao.DAOException;
 import by.etc.shop.dao.DAOFactory;
-import by.etc.shop.dao.UserDAO;
+import by.etc.shop.dao.user.UserDAO;
 import by.etc.shop.entity.User;
 
 public class ClientServiceImpl implements ClientService {
