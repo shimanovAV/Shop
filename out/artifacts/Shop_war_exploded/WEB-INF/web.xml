@@ -35,6 +35,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>SignInPage</servlet-name>
+        <jsp-file>/WEB-INF/signin.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignInPage</servlet-name>
+        <url-pattern>/Signin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>ErrorPage</servlet-name>
         <jsp-file>/WEB-INF/errorpage.jsp</jsp-file>
     </servlet>

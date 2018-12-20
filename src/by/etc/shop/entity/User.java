@@ -1,6 +1,9 @@
 package by.etc.shop.entity;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
+    private static final long serialVersionUID = 6259612578312780114L;
     private int id;
     private String userName;
     private String login;
@@ -87,5 +90,16 @@ public class User {
         result = prime * result + password.hashCode();
         result = prime * result + email.hashCode();
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", login='" + login + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }

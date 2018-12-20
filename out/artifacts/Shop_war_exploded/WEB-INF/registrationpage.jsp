@@ -12,7 +12,7 @@
 </head>
 <body>
 <form action="Registration" method="post">
-    <input type="hidden" name="Registration" value="Registration"/>
+    <input type="hidden" name="Command" value="Registration"/>
     Enter Name:<br/>
     <input type="text" name="name" value=""/><br/>
     Enter Email:<br/>

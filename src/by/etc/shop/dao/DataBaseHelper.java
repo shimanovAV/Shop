@@ -6,31 +6,32 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 
 public class DataBaseHelper {
     private Connection connect;
     private String query;
+    //private static final Logger logger;
 
-    public DataBaseHelper() throws DAOException {
+    /*static {
+        logger = LogManager.getLogger(DataBaseHelper.class);
+    }*/
+
+
+    public DataBaseHelper() {
         try {
             ConnectionPool pool = ConnectionPool.POOL.createPool();
             connect = pool.getConnection();
         }catch(ConnectionException e){
-            throw new DAOException(e);
+           // logger.log(Level.ERROR, "Connection  problems.");
         }
-
     }
 
-
-    public DataBaseHelper(String query) throws DAOException{
-        try{
-            ConnectionPool pool = ConnectionPool.POOL.createPool();
-            connect = pool.getConnection();
-        this.query = query;}
-        catch(ConnectionException e){
-            throw new DAOException(e);
-        }
+    public void setQuery(String query) {
+        this.query = query;
     }
 
     public PreparedStatement getPreparedStatement() throws DAOException{
@@ -43,64 +44,20 @@ public class DataBaseHelper {
         return ps;
     }
 
-    public boolean insertUser(PreparedStatement ps, User user) throws DAOException{
-        boolean flag = false;
-        try {
-            ps.setString(1, user.getUserName());
-            ps.setString(2, user.getLogin());
-            ps.setString(3, user.getPassword());
-            ps.setString(4, user.getEmail());
-            ps.executeUpdate();
-            flag = true;
-        } catch (SQLException e) {
-            throw new DAOException(e);
-        }
-        return flag;
-    }
-
-    public User getUser(PreparedStatement ps, String login, String password) throws DAOException {
-        User user = null;
-        try {
-            ResultSet rs = ps.executeQuery();
-            while (rs.next()) {
-                if (login.equals(rs.getString(3))) {
-                    if (password.equals(rs.getString(4))) {
-                        int id = rs.getInt(1);
-                        String userName = rs.getString(2);
-                        String parLogin = rs.getString(3);
-                        String parPassword = rs.getString(4);
-                        String email = rs.getString(5);
-                        user = new User(id, userName, parLogin, parPassword, email);
-                        break;
-                    }
-                }
-            }
-        } catch (SQLException e) {
-            throw new DAOException(e);
-        }
-        return user;
-    }
-
-    public boolean hasUser(PreparedStatement ps, String login) throws DAOException{
-        boolean flag = false;
-        try {
-            ResultSet rs = ps.executeQuery();
-            while (rs.next()) {
-                if (login.equals(rs.getString(3))) {
-                    flag = true;
-                    }
-                }
-            } catch (SQLException e) {
-            throw new DAOException(e);
-        }
-            return flag;
-    }
-
     public void closeStatement(PreparedStatement ps) throws DAOException {
         if (ps != null) {
             try {
                 ps.close();
             } catch (SQLException e) {
+                throw new DAOException(e);
+            }
+        }
+    }
+    public void returnConnection() throws DAOException {
+        if (connect != null) {
+            try {
+                ConnectionPool.POOL.returnConnection(connect);;
+            } catch (ConnectionException e) {
                 throw new DAOException(e);
             }
         }

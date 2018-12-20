@@ -33,20 +33,18 @@ public class Controller extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String commandName = req.getParameter(SIGN_IN);
-        if(commandName==null){
-            commandName= REGISTRATION;
-        }
-        Command command = provider.getCommand(commandName);
         String page = null;
+        String commandName = req.getParameter("Command");
         try{
+        Command command = provider.getCommand(commandName);
             page = command.execute(req, resp);
         } catch(CommandException e){
-page = URL_TO_ERROR_PAGE;
+            page = URL_TO_ERROR_PAGE;
         }
         RequestDispatcher dispatcher = req.getRequestDispatcher(page);
         if(dispatcher!=null){
             dispatcher.forward(req, resp);
         }
+
     }
 }

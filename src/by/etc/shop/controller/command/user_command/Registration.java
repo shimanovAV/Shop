@@ -1,5 +1,7 @@
-package by.etc.shop.controller.command;
+package by.etc.shop.controller.command.user_command;
 
+import by.etc.shop.controller.command.Command;
+import by.etc.shop.controller.command.CommandException;
 import by.etc.shop.entity.User;
 import by.etc.shop.service.ClientService;
 import by.etc.shop.service.ServiceException;

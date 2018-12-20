@@ -19,20 +19,16 @@ public enum ConnectionPool {
     public static final String PATH_TO_DRIVER = "com.mysql.jdbc.Driver";
 
         public ConnectionPool createPool() throws ConnectionException {
-            try{
-            Class.forName(PATH_TO_DRIVER);}
-            catch(ClassNotFoundException e){
-                throw new ConnectionException();
-            }
-            activePool= new ArrayBlockingQueue<Connection>(POOL_SIZE, true);
-            passivePool = new ArrayBlockingQueue<Connection>(POOL_SIZE, true);
-            for (int i = 0; i < POOL_SIZE; i++) {
-                try {
+            try {
+                Class.forName(PATH_TO_DRIVER);
+                activePool = new ArrayBlockingQueue<Connection>(POOL_SIZE, true);
+                passivePool = new ArrayBlockingQueue<Connection>(POOL_SIZE, true);
+                for (int i = 0; i < POOL_SIZE; i++) {
                     passivePool.add(DriverManager.getConnection(URL, USER, PASSWORD));
-                } catch (SQLException e) {
-                    throw new ConnectionException();
                 }
-            }
+            }catch (SQLException|ClassNotFoundException e) {
+                    throw new ConnectionException(e);
+                }
             return this;
         }
 
@@ -42,33 +38,33 @@ public enum ConnectionPool {
                 connection = passivePool.take();
                 activePool.put(connection);
             } catch (InterruptedException e) {
-                throw new ConnectionException();
+                throw new ConnectionException(e);
             }
             return connection;
         }
 
-        public void deleteConnection(Connection connection)throws ConnectionException{
+        public void returnConnection(Connection connection)throws ConnectionException{
             activePool.remove(connection);
             try {
                 passivePool.put(connection);
             } catch (InterruptedException e){
-                throw new ConnectionException();
+                throw new ConnectionException(e);
             }
         }
 
-        public void closeConnections(Connection connection)throws ConnectionException {
+        public void deleteConnections(Connection connection)throws ConnectionException {
             while ((connection = passivePool.poll())!=null){
                 try {
                     connection.close();
                 } catch (SQLException e) {
-                    throw new ConnectionException();
+                    throw new ConnectionException(e);
                 }
             }
             while ((connection = activePool.poll())!=null){
                 try {
                     connection.close();
                 } catch (SQLException e) {
-                    throw new ConnectionException();
+                    throw new ConnectionException(e);
                 }
             }
         }

@@ -1,5 +1,8 @@
 package by.etc.shop.controller.command;
 
+import by.etc.shop.controller.command.user_command.Registration;
+import by.etc.shop.controller.command.user_command.SignIn;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,14 +13,14 @@ public class CommandProvider {
        repository.put(CommandName.SIGNIN, new SignIn());
        repository.put(CommandName.REGISTRATION, new Registration());
     }
-    public Command getCommand(String name){
+    public Command getCommand(String name) throws CommandException{
         CommandName commandName =null;
         Command command = null;
         try{
             commandName = CommandName.valueOf(name.toUpperCase());
             command = repository.get(commandName);
         }catch(IllegalArgumentException | NullPointerException e){
-//write log
+            throw new CommandException(e);
         }
         return command;
     }

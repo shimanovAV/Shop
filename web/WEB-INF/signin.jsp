@@ -13,7 +13,7 @@
 </head>
 <body>
 <form action="SignIn" method="post">
-    <input type="hidden" name="SignIn" value="SignIn"/>
+    <input type="hidden" name="Command" value="SignIn"/>
     Enter login:<br/>
     <input type="text" name="login" value=""/><br/>
     Enter password:<br/>
