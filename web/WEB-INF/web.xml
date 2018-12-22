@@ -52,6 +52,19 @@
         <url-pattern>/errorpage</url-pattern>
     </servlet-mapping>
 
+    <listener>
+        <listener-class>by.etc.shop.controller.listener.SessionListener</listener-class>
+    </listener>
 
+
+    <filter>
+        <filter-name>localizationFilter</filter-name>
+        <filter-class>by.etc.shop.controller.filter.Localization</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>localizationFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 
 </web-app>

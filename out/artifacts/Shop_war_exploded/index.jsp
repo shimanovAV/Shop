@@ -1,19 +1,34 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <html>
 <head>
   <link rel="stylesheet" href="css/bootstrap.min.css" >
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="css/mainpage.css" rel="stylesheet">
+
+  <fmt:setLocale value="${sessionScope.language}"/>
+  <fmt:setBundle basename="resources.text" var="locale"/>
+
+  <fmt:message bundle="${locale}" key="label.sign.in" var="signIn"/>
+  <fmt:message bundle="${locale}" key="label.registration" var="registration"/>
+  <fmt:message bundle="${locale}" key="label.menu.new" var="New"/>
+  <fmt:message bundle="${locale}" key="label.menu.catalog" var="catalog"/>
+  <fmt:message bundle="${locale}" key="label.menu.sales" var="sales"/>
+  <fmt:message bundle="${locale}" key="label.language.ru" var="langRu"/>
+  <fmt:message bundle="${locale}" key="label.language.en" var="langRu"/>
+  <fmt:message bundle="${locale}" key="hint.search" var="search"/>
+
 </head>
 <body>
 
 <div class="container-fluid bg-light font-italic text-right ">
   <div class="search-box">
-    <input class="search-txt" type="search" placeholder="Search">
+    <input class="search-txt" type="search" placeholder=${search}>
     <a  href="#"><span class="icon"><i class="fa fa-search"></i></span></a>
 
   </div>
-   <a href="Signin">SignIn/</a><a href="Registrate">Registration</a>
+   <a href="Signin">${signIn}</a>/<a href="Registrate">${registration}</a>
 </div>
 
 <div class="container-fluid bg-light ">
@@ -29,13 +44,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav m-md-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">New</a>
+        <a class="nav-link" href="#">${New}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Catalog</a>
+        <a class="nav-link" href="#">${catalog}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Sales</a>
+        <a class="nav-link" href="#">${sales}</a>
       </li>
     </ul>
   </div>
