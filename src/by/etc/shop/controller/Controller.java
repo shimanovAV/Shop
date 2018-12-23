@@ -35,11 +35,12 @@ public class Controller extends HttpServlet {
             page = command.execute(req, resp);
         } catch(CommandException e){
             page = URL_TO_ERROR_PAGE;
+            e.printStackTrace();
         }
-        RequestDispatcher dispatcher = req.getRequestDispatcher(page);
+       /* RequestDispatcher dispatcher = req.getRequestDispatcher(page);
         if(dispatcher!=null){
             dispatcher.forward(req, resp);
-        }
+        }*/
     }
 
     @Override

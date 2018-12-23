@@ -6,20 +6,30 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a3362a7-ab46-4813-b3c1-91f8e65d6cb1" name="Default Changelist" comment="corrected all comments, made hashing">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javax_servlet_jsp_jstl_1_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javax_servlet_jsp_jstl_api_1_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/filter/Localization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/listener/SessionListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/text_en.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/text_ru.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Shop_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Shop_war_exploded.xml" afterDir="false" />
+    <list default="true" id="9a3362a7-ab46-4813-b3c1-91f8e65d6cb1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/resourceBundles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/language/ChangeLanguage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/listener/CurrentLanguage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/text.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/controller/command/CommandName.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/controller/command/CommandName.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/controller/command/CommandProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/controller/command/CommandProvider.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/css/mainpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/css/mainpage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/controller/command/CommandName.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/controller/command/CommandName.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/controller/command/CommandProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/controller/command/CommandProvider.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/by/etc/shop/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/controller/command/CommandName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/CommandName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/controller/command/CommandProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/CommandProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/controller/listener/SessionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/listener/SessionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/text_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/text_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/text_ru.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/text_ru.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/signin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/signin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/mainpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/mainpage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -64,60 +74,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+            <state relative-caret-position="206">
+              <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/listener/SessionListener.java">
+        <entry file="file://$PROJECT_DIR$/web/css/mainpage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/text_en.properties">
-          <provider editor-type-id="ResourceBundle" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/filter/Localization.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="24" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="7" selection-end-column="24" />
+            <state relative-caret-position="203">
+              <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -139,12 +106,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/java/by/etc/shop/controller/command/Command.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c4a206b9-928f-44b6-b616-a8c36ae469ca/console.sql" />
         <option value="$PROJECT_DIR$/src/java/by/etc/shop/dao/SQLUserDAO.java" />
         <option value="$PROJECT_DIR$/src/java/by/etc/shop/controller/Controller.java" />
         <option value="$PROJECT_DIR$/src/java/by/etc/shop/controller/command/SignIn.java" />
-        <option value="$PROJECT_DIR$/src/by/etc/shop/controller/command/CommandName.java" />
         <option value="$PROJECT_DIR$/internetshop/internetshop.properties" />
         <option value="$PROJECT_DIR$/src/by/etc/shop/dao/database.properties" />
         <option value="$PROJECT_DIR$/src/by/etc/shop/dao/UserDAO.java" />
@@ -165,15 +129,12 @@
         <option value="$PROJECT_DIR$/src/by/etc/shop/dao/ConnectionPool.java" />
         <option value="$PROJECT_DIR$/web/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/web/css/bootstrap-reboot.css" />
-        <option value="$PROJECT_DIR$/web/css/mainpage.css" />
         <option value="$PROJECT_DIR$/src/by/etc/shop/dao/connector/ConnectionException.java" />
         <option value="$PROJECT_DIR$/src/by/etc/shop/service/ClientValidator.java" />
-        <option value="$PROJECT_DIR$/src/by/etc/shop/controller/command/CommandProvider.java" />
         <option value="$PROJECT_DIR$/src/by/etc/shop/dao/DataBaseHelper.java" />
         <option value="$PROJECT_DIR$/src/by/etc/shop/service/ClientServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/by/etc/shop/dao/user/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/by/etc/shop/dao/user/SQLBaseFunction.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/signin.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/registrationpage.jsp" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/src/by/etc/shop/dao/Md5Encryption.java" />
@@ -181,15 +142,21 @@
         <option value="$PROJECT_DIR$/src/by/etc/shop/dao/connector/ConnectionPool.java" />
         <option value="$PROJECT_DIR$/src/by/etc/shop/entity/User.java" />
         <option value="$PROJECT_DIR$/src/by/etc/shop/entity/Product.java" />
-        <option value="$PROJECT_DIR$/src/resources/text.properties" />
         <option value="$PROJECT_DIR$/src/by/etc/shop/controller/listener/RequestListener.java" />
-        <option value="$PROJECT_DIR$/src/resources/text_en.properties" />
-        <option value="$PROJECT_DIR$/src/resources/text_ru.properties" />
         <option value="$PROJECT_DIR$/src/by/etc/shop/controller/filter/Localization.java" />
-        <option value="$PROJECT_DIR$/src/by/etc/shop/controller/Controller.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/src/by/etc/shop/controller/command/CommandName.java" />
+        <option value="$PROJECT_DIR$/src/by/etc/shop/controller/command/CommandProvider.java" />
+        <option value="$PROJECT_DIR$/src/resources/text_en.properties" />
+        <option value="$PROJECT_DIR$/src/resources/text.properties" />
+        <option value="$PROJECT_DIR$/src/by/etc/shop/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/by/etc/shop/controller/listener/CurrentLanguage.java" />
         <option value="$PROJECT_DIR$/src/by/etc/shop/controller/listener/SessionListener.java" />
+        <option value="$PROJECT_DIR$/src/by/etc/shop/controller/command/language/ChangeLanguage.java" />
+        <option value="$PROJECT_DIR$/src/resources/text_ru.properties" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/signin.jsp" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/web/css/mainpage.css" />
       </list>
     </option>
   </component>
@@ -219,7 +186,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -251,6 +217,32 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="shop" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="command" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="command" type="462c0819:PsiDirectoryNode" />
+              <item name="language" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="command" type="462c0819:PsiDirectoryNode" />
+              <item name="user_command" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
               <item name="listener" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -262,19 +254,25 @@
             <path>
               <item name="Shop" type="b2602c69:ProjectViewProjectNode" />
               <item name="Shop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="Resource Bundle 'text'" type="a6c14932:ResourceBundleNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Shop" type="b2602c69:ProjectViewProjectNode" />
               <item name="Shop" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Shop" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -285,7 +283,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545432262560" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545525753651" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib/javax.servlet.jsp.jstl-api-1.2.1.jar!/" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -513,7 +511,8 @@
       <workItem from="1544949456365" duration="4810000" />
       <workItem from="1544959766447" duration="4611000" />
       <workItem from="1545343734819" duration="394000" />
-      <workItem from="1545412839206" duration="14468000" />
+      <workItem from="1545412839206" duration="14904000" />
+      <workItem from="1545497728171" duration="18771000" />
     </task>
     <task id="LOCAL-00001" summary="made site, add ConnectionException, change package location">
       <created>1544629832987</created>
@@ -536,11 +535,18 @@
       <option name="project" value="LOCAL" />
       <updated>1545343986306</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="internationalization">
+      <created>1545437044055</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1545437044055</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195489000" />
+    <option name="totallyTimeSpent" value="214696000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -555,7 +561,7 @@
     <frame x="-6" y="-6" width="973" height="513" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23497267" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29508197" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -565,8 +571,8 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49945354" weight="0.07832898" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4896175" visible="true" weight="0.1305483" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49617487" weight="0.07832898" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4896175" visible="true" weight="0.07832898" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49617487" weight="0.08877285" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32898173" />
@@ -631,37 +637,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="made site, add ConnectionException, change package location" />
     <MESSAGE value="corrected all comments, made hashing" />
-    <option name="LAST_COMMIT_MESSAGE" value="corrected all comments, made hashing" />
+    <MESSAGE value="internationalization" />
+    <option name="LAST_COMMIT_MESSAGE" value="internationalization" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/by/etc/shop/controller/filter/Localization.java</url>
-          <line>15</line>
+          <url>file://$PROJECT_DIR$/src/by/etc/shop/controller/command/language/ChangeLanguage.java</url>
+          <line>20</line>
           <properties />
-          <option name="timeStamp" value="4" />
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3b192c65-627c-44fd-9a81-9505985e0e7c/console.sql" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/292c3219-9a15-4aad-8fa1-afd8145dd513/console.sql" />
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/errorpage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/homepage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://ba74fccb-ad94-4ba5-b337-025ba40ab3a1/schema/internetshop/table/users" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/127052b1-20c1-4ad3-8afe-1bd462196a8f/console.sql" />
     <entry file="das://127052b1-20c1-4ad3-8afe-1bd462196a8f/schema/shop/table/users" />
@@ -711,13 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/mainpage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/by/etc/shop/dao/ConnectorDB.java" />
     <entry file="file://$PROJECT_DIR$/src/by/etc/shop/dao/connector/ConnectionException.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -747,16 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/command/CommandProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="12" column="66" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/log4j2.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -769,13 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/signin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -810,26 +777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="65">
           <caret line="20" column="68" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/command/user_command/SignIn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/command/user_command/Registration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -877,24 +824,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/listener/RequestListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="9" column="80" selection-start-line="9" selection-start-column="80" selection-end-line="9" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/text_ru.properties">
-      <provider editor-type-id="ResourceBundle" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/listener/RequestListener.java" />
     <entry file="file://$PROJECT_DIR$/src/by/etc/shop/entity/Product.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -908,20 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="24" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Apache Software Foundation/Tomcat 8.5/lib/servlet-api.jar!/javax/servlet/Filter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="74">
@@ -931,8 +847,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/filter/Localization.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/command/user_command/SignIn.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/command/CommandName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/command/user_command/Registration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -940,27 +883,104 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/text_en.properties">
-      <provider editor-type-id="ResourceBundle" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        <state relative-caret-position="170">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="9" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/text.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+        <state relative-caret-position="106">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/command/CommandProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/listener/SessionListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+        <state relative-caret-position="119">
+          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/listener/CurrentLanguage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#221#222#0" expanded="true" />
+            <element signature="e#252#253#0" expanded="true" />
+            <element signature="e#247#248#0" expanded="true" />
+            <element signature="e#280#281#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/text_ru.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/signin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="13" column="74" selection-start-line="13" selection-start-column="74" selection-end-line="13" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/command/language/ChangeLanguage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/mainpage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
         </state>
       </provider>
     </entry>

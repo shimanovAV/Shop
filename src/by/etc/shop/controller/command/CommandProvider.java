@@ -1,5 +1,6 @@
 package by.etc.shop.controller.command;
 
+import by.etc.shop.controller.command.language.ChangeLanguage;
 import by.etc.shop.controller.command.user_command.Registration;
 import by.etc.shop.controller.command.user_command.SignIn;
 
@@ -12,6 +13,7 @@ public class CommandProvider {
 
        repository.put(CommandName.SIGNIN, new SignIn());
        repository.put(CommandName.REGISTRATION, new Registration());
+       repository.put(CommandName.CHANGELANGUAGE, new ChangeLanguage());
     }
     public Command getCommand(String name) throws CommandException{
         CommandName commandName =null;
