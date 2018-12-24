@@ -38,7 +38,7 @@
 </div>
 
 <div class="container-fluid bg-light ">
-  <a href="index.jsp"><img src="ShopName.png" class="rounded mx-auto d-block" alt="Responsive image"></a>
+  <a href="index.jsp"><img src="pictures/ShopName.png" class="rounded mx-auto d-block" alt="Responsive image"></a>
 </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <button class="navbar-toggler" type="button" data-toggle="collapse"

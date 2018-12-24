@@ -15,10 +15,8 @@ public class ChangeLanguage implements Command {
 
     private static final String LANGUAGE = "language";
     private static final String PAGE = "page";
-    public static final String URL_TO_ERROR_PAGE = "/errorpage";
 
-    public String execute(HttpServletRequest req, HttpServletResponse resp) throws CommandException {
-        String responce = null;
+    public void execute(HttpServletRequest req, HttpServletResponse resp) throws CommandException {
         HttpSession session = req.getSession();
         String language = req.getParameter(LANGUAGE);
         CurrentLanguage.LANGUAGE.setLanguage(language);
@@ -27,11 +25,8 @@ public class ChangeLanguage implements Command {
         try{
         if(page != null) {
             resp.sendRedirect(page);
-        } else {
-            responce = URL_TO_ERROR_PAGE;
         }} catch (IOException e){
             throw new CommandException(e);
         }
-    return responce;
     }
 }

@@ -5,5 +5,5 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public interface Command {
-    public String execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, CommandException;
+    public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, CommandException;
 }

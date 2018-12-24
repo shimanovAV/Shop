@@ -17,10 +17,6 @@ public class Localization implements Filter {
         HttpSession session = req.getSession();
 
         String language = (String) session.getAttribute(LANGUAGE);
-
-        if (language == null) {
-            language = "en";
-        }
         session.setAttribute(LANGUAGE, language);
         chain.doFilter(request, response);
     }

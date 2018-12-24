@@ -18,6 +18,7 @@ public class Controller extends HttpServlet {
     public static final String SIGN_IN = "SignIn";
     public static final String REGISTRATION = "Registration";
     public static final String URL_TO_ERROR_PAGE = "/errorpage";
+    public static final String COMMAND = "Command";
 
     public Controller() {
         super();
@@ -28,35 +29,23 @@ public class Controller extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String page = null;
-        String commandName = req.getParameter("Command");
+        String commandName = req.getParameter(COMMAND);
         try{
             Command command = provider.getCommand(commandName);
-            page = command.execute(req, resp);
+           command.execute(req, resp);
         } catch(CommandException e){
-            page = URL_TO_ERROR_PAGE;
             e.printStackTrace();
         }
-       /* RequestDispatcher dispatcher = req.getRequestDispatcher(page);
-        if(dispatcher!=null){
-            dispatcher.forward(req, resp);
-        }*/
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String page = null;
-        String commandName = req.getParameter("Command");
+        String commandName = req.getParameter(COMMAND);
         try{
         Command command = provider.getCommand(commandName);
-            page = command.execute(req, resp);
+           command.execute(req, resp);
         } catch(CommandException e){
-            page = URL_TO_ERROR_PAGE;
+            e.printStackTrace();
         }
-        RequestDispatcher dispatcher = req.getRequestDispatcher(page);
-        if(dispatcher!=null){
-            dispatcher.forward(req, resp);
-        }
-
     }
 }

@@ -3,5 +3,8 @@ package by.etc.shop.controller.command;
 public enum CommandName {
     SIGNIN,
     REGISTRATION,
-    CHANGELANGUAGE;
+    CHANGELANGUAGE,
+    ADDPRODUCT,
+    DELETEPRODUCT,
+    CHANGEPRODUCT;
 }

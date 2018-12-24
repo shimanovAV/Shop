@@ -1,35 +1,56 @@
 package by.etc.shop.entity;
 
 import java.io.Serializable;
+import java.util.Date;
+import java.util.Objects;
 
 public class User implements Serializable {
     private static final long serialVersionUID = 6259612578312780114L;
-    private int id;
+
     private String userName;
     private String login;
-    private String password;
     private String email;
+    private String address;
+    private Date birthday;
+    private int numberOfCard;
+    private String phoneNumber;
+    private boolean accessLevel;
 
     public User() {
     }
 
-    public User(int id, String userName, String login, String password, String email) {
-        this.id = id;
+    public User(String userName, String login, String email, String address, Date birthday, int numberOfCard, String phoneNumber, boolean accessLevel) {
         this.userName = userName;
         this.login = login;
-        this.password = password;
         this.email = email;
+        this.address = address;
+        this.birthday = birthday;
+        this.numberOfCard = numberOfCard;
+        this.phoneNumber = phoneNumber;
+        this.accessLevel = accessLevel;
     }
 
-    public User(String userName, String login, String password, String email) {
+    public User(String userName, String login, String email, Date birthday) {
         this.userName = userName;
         this.login = login;
-        this.password = password;
         this.email = email;
+        this.birthday = birthday;
     }
 
-    public int getId() {
-        return id;
+    public String getAddress() {
+        return address;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public int getNumberOfCard() {
+        return numberOfCard;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
     public String getUserName() {
@@ -40,20 +61,20 @@ public class User implements Serializable {
         return login;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public boolean isAccessLevel() {
+        return accessLevel;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setAccessLevel(boolean accessLevel) {
+        this.accessLevel = accessLevel;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setLogin(String login) {
@@ -64,8 +85,20 @@ public class User implements Serializable {
         this.userName = userName;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
+
+    public void setNumberOfCard(int numberOfCard) {
+        this.numberOfCard = numberOfCard;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     @Override
@@ -73,33 +106,41 @@ public class User implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return id == user.id &&
-                this.userName.equals(user.userName) &&
-                this.login.equals(user.login) &&
-                this.password.equals(user.password) &&
-                this.email.equals(user.email);
+        return numberOfCard == user.numberOfCard &&
+                userName.equals(user.userName) &&
+                login.equals(user.login) &&
+                email.equals(user.email) &&
+                address.equals(user.address) &&
+                birthday.equals(user.birthday) &&
+                phoneNumber.equals(user.phoneNumber)&&
+                accessLevel==user.accessLevel;
     }
 
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + id;
+        result = prime * result + numberOfCard;
         result = prime * result + userName.hashCode();
         result = prime * result + login.hashCode();
-        result = prime * result + password.hashCode();
         result = prime * result + email.hashCode();
-        return result;
-    }
+        result = prime * result + address.hashCode();
+        result = prime * result + birthday.hashCode();
+        result = prime * result + phoneNumber.hashCode();
+        result = prime * result + ((Boolean)accessLevel).compareTo(false);
+        return result; }
 
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", userName='" + userName + '\'' +
+                "userName='" + userName + '\'' +
                 ", login='" + login + '\'' +
-                ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
+                ", address='" + address + '\'' +
+                ", birthday=" + birthday +
+                ", numberOfCard=" + numberOfCard +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", accessLevel=" + accessLevel +
                 '}';
     }
 }
