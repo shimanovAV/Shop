@@ -13,10 +13,10 @@ import java.util.Date;
 import java.util.List;
 
 public class SQLProductDAO implements ProductDAO {
-    public static final String INSERT_ALL_FIELDS = "INSERT INTO product(name, description, category, price, quantity" +
+    public static final String INSERT_ALL_FIELDS = "INSERT INTO product(name, description, category, price, quantity, " +
             "adding_date, path_to_image) VALUES(?,?,?,?,?,?,?)";
     public static final String DELETE_ALL_ID= "delete from product where id = ?";
-    public static final String SELECT_ALL= "select * from books";
+    public static final String SELECT_ALL= "select * from product";
     public static final String UPDATE_WHERE_ID= "UPDATE product SET name=?," +
             "description = ?, category = ?, price = ?," +
             " quantity = ?, adding_date = ?, path_to_image = ? WHERE id = ?";
@@ -69,7 +69,7 @@ public class SQLProductDAO implements ProductDAO {
         }
     }
 
-    public List<Product> allBook() throws DAOException{
+    public List<Product> allProduct() throws DAOException{
         PreparedStatement statement=null;
         List<Product> products = new ArrayList<>();
         ResultSet rs = null;
@@ -80,16 +80,17 @@ public class SQLProductDAO implements ProductDAO {
             rs = statement.executeQuery();
             while(rs.next()){
                 Product product = null;
-                String name = rs.getString(1);
-                String description = rs.getString(2);
-                String category = rs.getString(3);
-                double price = rs.getDouble(4);
-                int quantity = rs.getInt(5);
-                Date addingDate = rs.getDate(6);
-                String stockName = rs.getString(7);
-                double oldPrice = rs.getDouble(8);
-                String pathToPicture = rs.getString(9);
-                product = new Product(name, description, category, price, quantity,
+                int id = rs.getInt(1);
+                String name = rs.getString(2);
+                String description = rs.getString(3);
+                String category = rs.getString(4);
+                double price = rs.getDouble(5);
+                int quantity = rs.getInt(6);
+                Date addingDate = rs.getDate(7);
+                String stockName = rs.getString(8);
+                double oldPrice = rs.getDouble(9);
+                String pathToPicture = rs.getString(10);
+                product = new Product(id, name, description, category, price, quantity,
                         addingDate, stockName, oldPrice, pathToPicture);
                 products.add(product);
             }
@@ -102,7 +103,7 @@ public class SQLProductDAO implements ProductDAO {
             return products;
         }
     }
-    public boolean update(Product product, int id) throws DAOException{
+    public boolean update(Product product) throws DAOException{
         PreparedStatement statement = null;
         try {
             helper.setQuery(UPDATE_WHERE_ID);
@@ -115,7 +116,7 @@ public class SQLProductDAO implements ProductDAO {
             java.sql.Date sqlDate = new java.sql.Date(product.getAddingDate().getTime());
             statement.setDate(6,sqlDate);
             statement.setString(7, product.getPath());
-            statement.setInt(8, id);
+            statement.setInt(8, product.getId());
             statement.executeUpdate();
             return true;
         } catch (SQLException e) {

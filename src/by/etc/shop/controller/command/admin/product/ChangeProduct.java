@@ -1,8 +1,8 @@
-package by.etc.shop.controller.command.admin_command.product;
+package by.etc.shop.controller.command.admin.product;
 
 import by.etc.shop.controller.command.Command;
 import by.etc.shop.controller.command.CommandException;
-import by.etc.shop.controller.command.admin_command.Uppload;
+import by.etc.shop.controller.command.admin.Uppload;
 import by.etc.shop.entity.Product;
 import by.etc.shop.service.ServiceException;
 import by.etc.shop.service.ServiceFactory;
@@ -37,15 +37,15 @@ public class ChangeProduct implements Command {
                     double price = Double.parseDouble(req.getParameter("price"));
                     int quantity = Integer.parseInt(req.getParameter("quantity"));
                     Part part = req.getPart("getFile");
-                    String pathToPicture = Uppload.picture(part);
+                    String pathToPicture = Uppload.picture(part,req);
                     String dateString = req.getParameter("addingDate");
                     Locale locale = new Locale(req.getSession().getAttribute("language").toString());
                     DateFormat format = DateFormat.getDateInstance(DateFormat.FULL, locale);
                     Date addingDate = format.parse(dateString);
-                    product = new Product(name, description, category, price, quantity, addingDate, pathToPicture);
+                    product = new Product(id, name, description, category, price, quantity, addingDate, pathToPicture);
                     ServiceFactory serviceFactory = ServiceFactory.getInstance();
                     ProductService productService = serviceFactory.getProductService();
-                    if (productService.update(product, id)) {
+                    if (productService.update(product)) {
                         RequestDispatcher dispatcher = req.getRequestDispatcher(page);
                         if (dispatcher != null) {
                             dispatcher.forward(req, resp);

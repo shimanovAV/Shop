@@ -19,7 +19,8 @@ public class Product {
     public Product() {
     }
 
-    public Product(String name, String description, String category, double price, int quantity, Date addingDate, String stockName, double oldPrice, String path) {
+    public Product(int id, String name, String description, String category, double price, int quantity, Date addingDate, String stockName, double oldPrice, String path) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.category = category;
@@ -28,6 +29,17 @@ public class Product {
         this.addingDate = addingDate;
         this.stockName = stockName;
         this.oldPrice = oldPrice;
+        this.path = path;
+    }
+
+    public Product (int id, String name, String description, String category, double price, int quantity, Date addingDate, String path) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.category = category;
+        this.price = price;
+        this.quantity = quantity;
+        this.addingDate = addingDate;
         this.path = path;
     }
 

@@ -3,13 +3,20 @@ package by.etc.shop.entity;
 import java.util.Date;
 
 public class Stock {
+    private int id;
     private String name;
     private byte percentSize;
-    private Date expireDate
+    private Date expireDate;
 
     public Stock() {
     }
 
+    public Stock(int id, String name, byte percentSize, Date expireDate) {
+        this.id = id;
+        this.name = name;
+        this.percentSize = percentSize;
+        this.expireDate = expireDate;
+    }
     public Stock(String name, byte percentSize, Date expireDate) {
         this.name = name;
         this.percentSize = percentSize;
@@ -26,6 +33,14 @@ public class Stock {
 
     public Date getExpireDate() {
         return expireDate;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setExpireDate(Date expireDate) {
@@ -45,7 +60,8 @@ public class Stock {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Stock stock = (Stock) o;
-        return percentSize == stock.percentSize &&
+        return id == stock.id &&
+                percentSize == stock.percentSize &&
                 name.equals(stock.name)&&
                 expireDate.equals(stock.expireDate);
     }
@@ -54,6 +70,7 @@ public class Stock {
     public int hashCode() {
         final int prime = 31;
         int result = 1;
+        result = prime * result + id;
         result = prime * result + name.hashCode();
         result = prime * result + (int)percentSize;
         result = prime * result + expireDate.hashCode();
@@ -66,6 +83,7 @@ public class Stock {
                 "name='" + name + '\'' +
                 ", percentSize=" + percentSize +
                 ", expireDate=" + expireDate +
+                ", id=" + id +
                 '}';
     }
 }

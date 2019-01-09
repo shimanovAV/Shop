@@ -6,9 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import org.apache.logging.log4j.Level;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 
 
 public class DataBaseHelper {
@@ -36,12 +34,17 @@ public class DataBaseHelper {
 
     public PreparedStatement getPreparedStatement() throws DAOException{
         PreparedStatement ps = null;
+
         try {
-            ps = connect.prepareStatement(query);
-        } catch (SQLException e) {
-            throw new DAOException(e);
+            if (!ConnectionPool.POOL.isActive(this.connect)) {
+                this.connect = ConnectionPool.POOL.getConnection();
+            }
+
+            ps = this.connect.prepareStatement(this.query);
+            return ps;
+        } catch (ConnectionException | SQLException var3) {
+            throw new DAOException(var3);
         }
-        return ps;
     }
 
     public void closeStatement(PreparedStatement ps) throws DAOException {
@@ -54,6 +57,7 @@ public class DataBaseHelper {
         }
     }
     public void returnConnection() throws DAOException {
+
         if (connect != null) {
             try {
                 ConnectionPool.POOL.returnConnection(connect);;

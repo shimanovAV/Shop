@@ -1,4 +1,4 @@
-package by.etc.shop.controller.command.user_command;
+package by.etc.shop.controller.command.common;
 
 import by.etc.shop.controller.command.Command;
 import by.etc.shop.controller.command.CommandException;
@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
@@ -40,10 +41,8 @@ public class Registration implements Command {
         String password = req.getParameter(PASSWORD);
         String email = req.getParameter(EMAIL);
         String dateString = req.getParameter(BIRTHDAY);
-        Locale locale = new Locale(req.getSession().getAttribute(LANGUAGE).toString());
-        DateFormat format = DateFormat.getDateInstance(DateFormat.FULL, locale);
         try {
-            Date birthday = format.parse(dateString);
+            Date birthday=new SimpleDateFormat("yyyy-MM-dd").parse(dateString);
             User user = new User(name, login, email, birthday);
             ServiceFactory serviceFactory = ServiceFactory.getInstance();
             UserService clientService = serviceFactory.getClientService();

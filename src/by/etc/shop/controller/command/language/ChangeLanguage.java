@@ -3,8 +3,7 @@ package by.etc.shop.controller.command.language;
 import by.etc.shop.controller.command.Command;
 import by.etc.shop.controller.command.CommandException;
 import by.etc.shop.controller.listener.CurrentLanguage;
-import by.etc.shop.controller.listener.SessionListener;
-import by.etc.shop.service.ServiceFactory;
+
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

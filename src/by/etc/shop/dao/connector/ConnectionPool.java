@@ -52,6 +52,10 @@ public enum ConnectionPool {
             }
         }
 
+    public boolean isActive(Connection connection) {
+        return this.activePool.contains(connection);
+    }
+
         public void deleteConnections(Connection connection)throws ConnectionException {
             while ((connection = passivePool.poll())!=null){
                 try {

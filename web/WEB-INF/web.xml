@@ -15,33 +15,17 @@
         <url-pattern>/SignIn</url-pattern>
         <url-pattern>/Registration</url-pattern>
         <url-pattern>/ChangeLanguage</url-pattern>
+        <url-pattern>/SignOut</url-pattern>
+        <url-pattern>/AddProduct</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>HomePage</servlet-name>
-        <jsp-file>/WEB-INF/homepage.jsp</jsp-file>
+        <servlet-name>AdminPage</servlet-name>
+        <jsp-file>/WEB-INF/admin.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
-        <servlet-name>HomePage</servlet-name>
-        <url-pattern>/homepage</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>RegistrationPage</servlet-name>
-        <jsp-file>/WEB-INF/registrationpage.jsp</jsp-file>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>RegistrationPage</servlet-name>
-        <url-pattern>/Registrate</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>SignInPage</servlet-name>
-        <jsp-file>/WEB-INF/signin.jsp</jsp-file>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>SignInPage</servlet-name>
-        <url-pattern>/Signin</url-pattern>
+        <servlet-name>AdminPage</servlet-name>
+        <url-pattern>/Admin</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -65,6 +49,16 @@
 
     <filter-mapping>
         <filter-name>localizationFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>by.etc.shop.controller.filter.Encoding</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
