@@ -17,6 +17,16 @@
         <url-pattern>/ChangeLanguage</url-pattern>
         <url-pattern>/SignOut</url-pattern>
         <url-pattern>/AddProduct</url-pattern>
+        <url-pattern>/DeleteProduct</url-pattern>
+        <url-pattern>/ChangeProduct</url-pattern>
+        <url-pattern>/FindProduct</url-pattern>
+        <url-pattern>/AddToBasket</url-pattern>
+        <url-pattern>/BasketProduct</url-pattern>
+        <url-pattern>/AddStock</url-pattern>
+        <url-pattern>/DeleteStock</url-pattern>
+        <url-pattern>/ChangeStock</url-pattern>
+        <url-pattern>/DeleteFromBasket</url-pattern>
+        <url-pattern>/ChangeQuantity</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -29,12 +39,39 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>ErrorPage</servlet-name>
-        <jsp-file>/WEB-INF/errorpage.jsp</jsp-file>
+        <servlet-name>SalePage</servlet-name>
+        <jsp-file>/WEB-INF/adminSales.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ErrorPage</servlet-name>
-        <url-pattern>/errorpage</url-pattern>
+        <servlet-name>SalePage</servlet-name>
+        <url-pattern>/adminSales</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>BasketPage</servlet-name>
+        <jsp-file>/WEB-INF/basket.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BasketPage</servlet-name>
+        <url-pattern>/BasketPage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ProductPage</servlet-name>
+        <jsp-file>/productpage.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProductPage</servlet-name>
+        <url-pattern>/Product</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SignInPage</servlet-name>
+        <jsp-file>/signin.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignInPage</servlet-name>
+        <url-pattern>/GoToSignIn</url-pattern>
     </servlet-mapping>
 
     <listener>

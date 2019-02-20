@@ -14,9 +14,7 @@
     <fmt:setLocale value="${sessionScope.language}"/>
     <fmt:setBundle basename="resources.text" var="locale"/>
 
-    <fmt:message bundle="${locale}" key="label.sign.out" var="signOut"/>
-    <fmt:message bundle="${locale}" key="label.language.en" var="langEn"/>
-    <fmt:message bundle="${locale}" key="label.language.ru" var="langRu"/>
+
     <fmt:message bundle="${locale}" key="hint.add.product" var="addProduct"/>
     <fmt:message bundle="${locale}" key="hint.name" var="name"/>
     <fmt:message bundle="${locale}" key="hint.description" var="description"/>
@@ -28,23 +26,14 @@
     <fmt:message bundle="${locale}" key="hint.image" var="image"/>
 </head>
 <body>
-<div>
-    <c:if test="${sessionScope.language==\"ru\"}" var="rusLang">
-        <a class="lang"
-           href="ChangeLanguage?Command=CHANGELANGUAGE&language=en&page=${pageContext.request.requestURL}">${langEn}</a>
-    </c:if>
-    <c:if test="${rusLang==false}">
-        <a class="lang"
-           href="ChangeLanguage?Command=CHANGELANGUAGE&language=ru&page=${pageContext.request.requestURL}">${langRu}</a>
-    </c:if>
-</div>
 
-<div class="container">
-    <jsp:include page="/WEB-INF/allProduct.jsp"/>
+<div>
+    <jsp:include page = "/WEB-INF/adminHeader.jsp" flush="true"/>
 </div>
 
 <a class="text-right" data-target="#addproduct"
    data-toggle="modal">${addProduct}</a>
+
 
 <div class="modal" id="addproduct">
     <div class="modal-dialog">
@@ -81,6 +70,11 @@
         </div>
     </div>
 </div>
+
+<div class="container">
+    <jsp:include page="/allProduct.jsp"/>
+</div>
+
 <script src="js/bootstrap.min.js"/>
 </body>
 </html>

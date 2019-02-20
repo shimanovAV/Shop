@@ -2,11 +2,14 @@ package by.etc.shop.controller.command.admin.product;
 
 import by.etc.shop.controller.command.Command;
 import by.etc.shop.controller.command.CommandException;
-import by.etc.shop.controller.command.admin.Uppload;
+import by.etc.shop.controller.command.admin.Picture;
+import by.etc.shop.controller.listener.Catalog;
 import by.etc.shop.entity.Product;
+import by.etc.shop.entity.Stock;
 import by.etc.shop.service.ServiceException;
 import by.etc.shop.service.ServiceFactory;
 import by.etc.shop.service.product.ProductService;
+import by.etc.shop.service.stock.StockService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -21,41 +24,41 @@ import java.util.Date;
 import java.util.Locale;
 
 public class ChangeProduct implements Command {
+    public static final String ADMIN_PAGE = "/Admin";
 
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws CommandException {
-            Product product = null;
+
+            Product product;
             String page = req.getParameter("page");
-            HttpSession session = req.getSession();
-            //нужна ли тут проверка классов?
-            Boolean change = (Boolean) session.getAttribute("change");
-            int id = (Integer)session.getAttribute("productId");
+            int id = Integer.parseInt(req.getParameter("productID"));
             try {
-                if (change) {
                     String name = req.getParameter("name");
                     String description = req.getParameter("description");
                     String category = req.getParameter("category");
-                    double price = Double.parseDouble(req.getParameter("price"));
+                    double oldPrice = Double.parseDouble(req.getParameter("price"));
                     int quantity = Integer.parseInt(req.getParameter("quantity"));
-                    Part part = req.getPart("getFile");
-                    String pathToPicture = Uppload.picture(part,req);
-                    String dateString = req.getParameter("addingDate");
-                    Locale locale = new Locale(req.getSession().getAttribute("language").toString());
-                    DateFormat format = DateFormat.getDateInstance(DateFormat.FULL, locale);
-                    Date addingDate = format.parse(dateString);
-                    product = new Product(id, name, description, category, price, quantity, addingDate, pathToPicture);
-                    ServiceFactory serviceFactory = ServiceFactory.getInstance();
+                    Date addingDate = new Date();
+                    String pathToPicture = req.getParameter("productPathToPicture");
+                ServiceFactory serviceFactory = ServiceFactory.getInstance();
+                StockService stockService = serviceFactory.getStockService();
+                    String stockName = req.getParameter("stock");
+                    double newPrice = stockService.recalculation(stockName, oldPrice);
+                    product = new Product(id, name, description, category, newPrice, quantity, addingDate,
+                            stockName, oldPrice, pathToPicture);
                     ProductService productService = serviceFactory.getProductService();
                     if (productService.update(product)) {
-                        RequestDispatcher dispatcher = req.getRequestDispatcher(page);
+                        Catalog.CATALOG.putIn(req.getSession());
+                        RequestDispatcher dispatcher = req.getRequestDispatcher(ADMIN_PAGE);
                         if (dispatcher != null) {
                             dispatcher.forward(req, resp);
                         }
                     } else {
+                        HttpSession session = req.getSession();
                         session.setAttribute("error", true);
                         resp.sendRedirect("anotherPage");
                     }
-                }
-            }catch (ServiceException | IOException | ServletException | ParseException e) {
+
+            }catch (ServiceException | IOException | ServletException e) {
                 throw new CommandException(e);
             }
     }

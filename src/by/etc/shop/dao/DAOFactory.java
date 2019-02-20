@@ -2,6 +2,8 @@ package by.etc.shop.dao;
 
 import by.etc.shop.dao.basket.BasketDAO;
 import by.etc.shop.dao.basket.SQLBasketDAO;
+import by.etc.shop.dao.like.LikeDAO;
+import by.etc.shop.dao.like.SQLLikeDAO;
 import by.etc.shop.dao.product.ProductDAO;
 import by.etc.shop.dao.product.SQLProductDAO;
 import by.etc.shop.dao.stock.SQLStockDAO;
@@ -16,6 +18,7 @@ public final class DAOFactory {
     private final ProductDAO sqlProductImpl = new SQLProductDAO();
     private final StockDAO sqlStockImpl = new SQLStockDAO();
     private final BasketDAO sqlBasketImpl = new SQLBasketDAO();
+    private final LikeDAO sqlLikeImpl = new SQLLikeDAO();
 
     private DAOFactory(){}
 
@@ -38,4 +41,6 @@ public final class DAOFactory {
     public BasketDAO getBasketDAO(){
         return sqlBasketImpl;
     }
+
+    public LikeDAO getLikeDAO() { return sqlLikeImpl; }
 }

@@ -43,11 +43,24 @@ public enum ConnectionPool {
             return connection;
         }
 
+    public Connection getManualConnection() throws ConnectionException {
+        Connection connection = getConnection();
+        try {
+            connection.setAutoCommit(false);
+        } catch (SQLException e) {
+            throw new ConnectionException("Can't set false commit.", e);
+        }
+        return connection;
+    }
+
         public void returnConnection(Connection connection)throws ConnectionException{
-            activePool.remove(connection);
             try {
+                if (!connection.getAutoCommit()) {
+                    connection.commit();
+                }
+                activePool.remove(connection);
                 passivePool.put(connection);
-            } catch (InterruptedException e){
+            } catch (SQLException | InterruptedException e){
                 throw new ConnectionException(e);
             }
         }

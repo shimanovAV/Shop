@@ -2,6 +2,7 @@ package by.etc.shop.entity;
 
 import java.util.Date;
 
+
 public class Stock {
     private int id;
     private String name;
@@ -17,6 +18,7 @@ public class Stock {
         this.percentSize = percentSize;
         this.expireDate = expireDate;
     }
+
     public Stock(String name, byte percentSize, Date expireDate) {
         this.name = name;
         this.percentSize = percentSize;
@@ -60,7 +62,7 @@ public class Stock {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Stock stock = (Stock) o;
-        return id == stock.id &&
+        return  id == stock.id &&
                 percentSize == stock.percentSize &&
                 name.equals(stock.name)&&
                 expireDate.equals(stock.expireDate);

@@ -9,6 +9,9 @@ import by.etc.shop.service.ServiceException;
 import java.util.List;
 
 public class ProductServiceImpl implements ProductService {
+
+    public static final int WRONG_PRODUCT_ID = 0;
+
     public boolean add(Product product) throws ServiceException{
         try{
             if (ProductValidator.isValid(product.getName())){
@@ -23,15 +26,15 @@ public class ProductServiceImpl implements ProductService {
             throw new ServiceException(e);
         }
     }
-    public boolean delete(Product product) throws ServiceException{
+    public boolean delete(int productID) throws ServiceException{
         try{
-            if (ProductValidator.isValid(product.getName())){
+            if (productID > WRONG_PRODUCT_ID){
                 DAOFactory daoObjectFactory = DAOFactory.getInstance();
                 ProductDAO productDAO = daoObjectFactory.getProductDAO();
-                return productDAO.delete(product);
+                return productDAO.delete(productID);
             }
             else {
-                throw new ServiceException("Name of the product is not valid");
+                throw new ServiceException("ID of the product is not valid");
             }
         }catch(DAOException e){
             throw new ServiceException(e);
@@ -58,6 +61,21 @@ public class ProductServiceImpl implements ProductService {
             ProductDAO productDAO = daoObjectFactory.getProductDAO();
             return productDAO.allProduct();
         } catch(DAOException e){
+            throw new ServiceException(e);
+        }
+    }
+
+    public Product getProductById(int productID) throws ServiceException{
+        try{
+            if (productID > WRONG_PRODUCT_ID){
+                DAOFactory daoObjectFactory = DAOFactory.getInstance();
+                ProductDAO productDAO = daoObjectFactory.getProductDAO();
+                return productDAO.getProductById(productID);
+            }
+            else {
+                throw new ServiceException("ID of the product is not valid");
+            }
+        }catch(DAOException e){
             throw new ServiceException(e);
         }
     }

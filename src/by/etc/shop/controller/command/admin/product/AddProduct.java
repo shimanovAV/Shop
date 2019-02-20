@@ -2,7 +2,7 @@ package by.etc.shop.controller.command.admin.product;
 
 import by.etc.shop.controller.command.Command;
 import by.etc.shop.controller.command.CommandException;
-import by.etc.shop.controller.command.admin.Uppload;
+import by.etc.shop.controller.command.admin.Picture;
 import by.etc.shop.controller.listener.Catalog;
 import by.etc.shop.entity.Product;
 import by.etc.shop.service.ServiceException;
@@ -10,17 +10,13 @@ import by.etc.shop.service.product.ProductService;
 import by.etc.shop.service.ServiceFactory;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.ParseException;
 import java.util.Date;
-import java.util.Locale;
 
 public class AddProduct implements Command {
     public static final String ADMIN_PAGE = "/Admin";
@@ -35,11 +31,8 @@ public class AddProduct implements Command {
             int quantity = Integer.parseInt(req.getParameter("quantity"));
 
             Part part = req.getPart("getFile");
-            String pathToPicture = Uppload.picture(part, req);
-
-            int lastIndex = pathToPicture.lastIndexOf("\\");
-            pathToPicture = pathToPicture.substring(lastIndex+1,pathToPicture.length());
-            pathToPicture = ".//pictures//" + pathToPicture;
+            String pathToPicture = Picture.PICTURE.uppload(part, req);
+            pathToPicture = Picture.PICTURE.fromServerToDB(pathToPicture);
             Date addingDate = new Date();
             Product product = new Product(name, description, category, price, quantity, addingDate, pathToPicture);
             ServiceFactory serviceFactory = ServiceFactory.getInstance();
@@ -47,7 +40,7 @@ public class AddProduct implements Command {
            if(productService.add(product)){
                page=ADMIN_PAGE;
                RequestDispatcher dispatcher = req.getRequestDispatcher(page);
-               Catalog.CATALOG.putIn(req);
+               Catalog.CATALOG.putIn(req.getSession());
                if (dispatcher != null) {
                    dispatcher.forward(req, resp);
                }

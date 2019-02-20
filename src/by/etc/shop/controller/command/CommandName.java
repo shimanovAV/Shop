@@ -10,6 +10,7 @@ public enum CommandName {
     ADDPRODUCT,
     DELETEPRODUCT,
     CHANGEPRODUCT,
+    FINDPRODUCTBYID,
 
     ADDSTOCK,
     CHANGESTOCK,
@@ -17,5 +18,6 @@ public enum CommandName {
 
     ADDTOBASKET,
     CHANGEQUANTITY,
-    DELETEFROMBASKET;
+    DELETEFROMBASKET,
+    BASKETPRODUCT;
 }

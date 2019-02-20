@@ -14,130 +14,24 @@
   <fmt:setLocale value="${sessionScope.language}"/>
   <fmt:setBundle basename="resources.text" var="locale"/>
 
-  <fmt:message bundle="${locale}" key="label.sign.in" var="signIn"/>
-  <fmt:message bundle="${locale}" key="label.sign.out" var="signOut"/>
-  <fmt:message bundle="${locale}" key="label.registration" var="registration"/>
-  <fmt:message bundle="${locale}" key="label.menu.new" var="New"/>
-  <fmt:message bundle="${locale}" key="label.menu.catalog" var="catalog"/>
-  <fmt:message bundle="${locale}" key="label.menu.sales" var="sales"/>
-  <fmt:message bundle="${locale}" key="label.language.en" var="langEn"/>
-  <fmt:message bundle="${locale}" key="label.language.ru" var="langRu"/>
-  <fmt:message bundle="${locale}" key="hint.search" var="search"/>
-  <fmt:message bundle="${locale}" key="hint.login" var="login"/>
-  <fmt:message bundle="${locale}" key="hint.password" var="password"/>
-  <fmt:message bundle="${locale}" key="hint.name" var="name"/>
-  <fmt:message bundle="${locale}" key="hint.email" var="email"/>
-  <fmt:message bundle="${locale}" key="hint.birthday" var="birthday"/>
+
 
 </head>
 <body>
-<div class="container-fluid bg-light font-italic">
-  <div>
-    <c:if test="${sessionScope.language==\"ru\"}" var="rusLang">
-      <a class="lang" href="ChangeLanguage?Command=CHANGELANGUAGE&language=en&page=${pageContext.request.requestURL}">${langEn}</a>
-    </c:if>
-    <c:if test="${rusLang==false}">
-      <a class="lang" href="ChangeLanguage?Command=CHANGELANGUAGE&language=ru&page=${pageContext.request.requestURL}">${langRu}</a>
-    </c:if>
-  </div>
-  <div class="search-box">
-    <input class="search-txt" type="search" placeholder=${search}>
-    <div class="search-btn">
-      <a> <i class="fa fa-search"></i></a>
-    </div>
-  </div>
-  <c:if test="${sessionScope.user==null}" var="isLogin">
-  <a class="text-right" href="Signin" data-target="#signin"
-     data-toggle="modal">${signIn}</a>/<a href="Registrate" data-target="#registrate"
-                                          data-toggle="modal">${registration}</a>
-  </c:if>
-  <c:if test="${isLogin==false}">
-    <a class="text-right"  href="SignOut?Command=SIGNOUT&page=${pageContext.request.requestURL}">${signOut}</a>
-  </c:if>
+<div>
+  <jsp:include page = "header.jsp" flush="true"/>
+</div>
+<div class="container">
+  <jsp:include page="/allProduct.jsp"/>
+</div>
 
-  <div class="modal" id="signin">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3>${signIn}</h3>
-          <button type="button" class="close" data-dismiss="modal"> &times;</button>
-        </div>
-        <div class="modal-body">
-          <form class="form-group" action="SignIn" method="post">
-            <input type="hidden" name="Command" value="SignIn"/>
-            <input type="hidden" name="page" value=${pageContext.request.requestURL}/>
-            <i class="fa fa-user fa-2x"style="color:#8d6e63"></i> <label>${login}</label>
-            <input type="text" name="login" class="form-control"/><br/>
-            <i class="fa fa-lock fa-2x"style="color:#8d6e63"></i><label>${password}</label>
-            <input type="password" name="password" class="form-control"/><br/>
-            <input class="btn" type="submit"  value="${signIn}"/><br/>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="modal" id="registrate">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3>${registration}</h3>
-        <button type="button" class="close" data-dismiss="modal"> &times;</button>
-      </div>
-      <div class="modal-body">
-        <form class="form-group" action="Registration" method="post">
-          <input type="hidden" name="Command" value="Registration"/>
-          <input type="hidden" name="page" value=${pageContext.request.requestURL}/>
-          <i class="fa fa-user fa-2x" style="color:#8d6e63"></i>
-          <label>${name}</label>
-          <input type="text" name="name" class="form-control"/><br/>
-          <i class="fa fa-user fa-2x" style="color:#8d6e63"></i>
-          <label>${birthday}</label>
-          <input type="date" name="birthday" class="form-control"/><br/>
-          <i class="fa fa-birthday-cake fa-2x"style="color:#8d6e63"></i>
-          <label>${email}</label>
-          <input type="text" name="email" class="form-control"/><br/>
-          <i class="fa fa-user fa-2x"style="color:#8d6e63"></i>
-          <label>${login}</label>
-          <input type="text" name="login" class="form-control"/><br/>
-          <i class="fa fa-lock fa-2x"style="color:#8d6e63"></i>
-          <label>${password}</label>
-          <input type="password" name="password" class="form-control"/><br/>
-            <input class="btn" type="submit" value="${registration}"/><br/>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<div class="container-fluid bg-light ">
-  <a href="index.jsp"><img src=".//pictures//ShopName.png" class="rounded mx-auto d-block" alt="Responsive image"></a>
-</div>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav m-md-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#">${New}</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">${catalog}</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">${sales}</a>
-      </li>
-    </ul>
-  </div>
-</nav>
 
 <a href="#" class="btn btn-danger" data-toggle="button" aria-pressed="false" role="button">
   Кнопка-переключатель
 </a>
+</div>
+
+
 
 <script src="js/bootstrap.min.js"/>
 </body>

@@ -34,16 +34,45 @@ public class DataBaseHelper {
 
     public PreparedStatement getPreparedStatement() throws DAOException{
         PreparedStatement ps = null;
-
         try {
             if (!ConnectionPool.POOL.isActive(this.connect)) {
                 this.connect = ConnectionPool.POOL.getConnection();
             }
-
             ps = this.connect.prepareStatement(this.query);
             return ps;
         } catch (ConnectionException | SQLException var3) {
             throw new DAOException(var3);
+        }
+    }
+
+    public PreparedStatement getPreparedStatementManualCon() throws DAOException{
+        PreparedStatement ps = null;
+        try {
+            if (!ConnectionPool.POOL.isActive(this.connect)) {
+                this.connect = ConnectionPool.POOL.getManualConnection();
+            }
+            ps = this.connect.prepareStatement(this.query);
+            return ps;
+        } catch (ConnectionException | SQLException var3) {
+            throw new DAOException(var3);
+        }
+    }
+
+    public void commit(PreparedStatement ps) throws DAOException{
+        try {
+            Connection connection = ps.getConnection();
+            connection.commit();
+        }catch (SQLException e){
+            throw new DAOException(e);
+        }
+    }
+
+    public void rollBack(PreparedStatement ps) throws DAOException{
+        try {
+            Connection connection = ps.getConnection();
+            connection.rollback();
+        }catch (SQLException e){
+            throw new DAOException(e);
         }
     }
 

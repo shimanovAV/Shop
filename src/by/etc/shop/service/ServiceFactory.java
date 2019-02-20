@@ -1,8 +1,9 @@
 package by.etc.shop.service;
 
-import by.etc.shop.entity.Basket;
 import by.etc.shop.service.basket.BasketService;
 import by.etc.shop.service.basket.BasketServiceImpl;
+import by.etc.shop.service.like.LikeService;
+import by.etc.shop.service.like.LikeServiceImpl;
 import by.etc.shop.service.product.ProductService;
 import by.etc.shop.service.product.ProductServiceImpl;
 import by.etc.shop.service.stock.StockService;
@@ -17,6 +18,7 @@ public final class ServiceFactory {
     private final ProductService productService = new ProductServiceImpl();
     private final StockService stockService = new StockServiceImpl();
     private final BasketService basketService = new BasketServiceImpl();
+    private final LikeService likeService = new LikeServiceImpl();
 
     private ServiceFactory(){}
     public static ServiceFactory getInstance(){
@@ -33,5 +35,8 @@ public final class ServiceFactory {
     }
     public BasketService getBasketService(){
         return basketService;
+    }
+    public LikeService getLikeService(){
+        return likeService;
     }
 }

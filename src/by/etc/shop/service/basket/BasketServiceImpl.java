@@ -3,8 +3,12 @@ package by.etc.shop.service.basket;
 import by.etc.shop.dao.DAOException;
 import by.etc.shop.dao.DAOFactory;
 import by.etc.shop.dao.basket.BasketDAO;
+import by.etc.shop.dao.product.ProductDAO;
 import by.etc.shop.entity.Basket;
+import by.etc.shop.entity.Product;
 import by.etc.shop.service.ServiceException;
+
+import java.util.List;
 
 public class BasketServiceImpl implements BasketService {
 
@@ -49,6 +53,20 @@ public class BasketServiceImpl implements BasketService {
         }catch(DAOException e){
             throw new ServiceException(e);
         }
+    }
+   public List<Product> getAllFromBasket(String userLogin) throws ServiceException{
+       try {
+           if(userLogin!=null || !(userLogin.isEmpty())) {
+               DAOFactory daoObjectFactory = DAOFactory.getInstance();
+               BasketDAO basketDAO = daoObjectFactory.getBasketDAO();
+               return basketDAO.allProduct(userLogin);
+           }
+           else{
+               throw new ServiceException("Basket is not valid");
+           }
+       } catch(DAOException e){
+           throw new ServiceException(e);
+       }
     }
 
 }

@@ -1,3 +1,6 @@
+.container {
+    margin-top: 50px;
+}
  a:visited {
     color: #8d6e63 !important;
      text-decoration: none;
@@ -61,7 +64,8 @@ cursor: pointer;
  .btn-primary{
      background-color: #8d6e63;
      color: #8d6e63;
-
  }
+
+
 
 

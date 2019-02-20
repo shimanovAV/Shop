@@ -46,12 +46,12 @@ public class SignIn implements Command {
                 if(user.isAccessLevel()){
                     page=ADMIN_PAGE;
                     RequestDispatcher dispatcher = req.getRequestDispatcher(page);
-                    Catalog.CATALOG.putIn(req);
                     if (dispatcher != null) {
                         dispatcher.forward(req, resp);
                     }
                 } else{
                     page=req.getParameter(PAGE);
+                    page = page.substring(0, page.length()-1);
                     resp.sendRedirect(page);
                 }
             } else {

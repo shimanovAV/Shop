@@ -4,19 +4,20 @@ import java.util.Objects;
 
 public class Basket {
     private int productId;
-    private int userId;
+    private String userId;
     private int quantity;
+
 
     public Basket() {
     }
 
-    public Basket(int productId, int userId, int quantity) {
+    public Basket(int productId, String userId, int quantity) {
         this.productId = productId;
         this.userId = userId;
         this.quantity = quantity;
     }
 
-    public Basket(int productId, int userId) {
+    public Basket(int productId, String userId) {
         this.productId = productId;
         this.userId = userId;
     }
@@ -25,7 +26,7 @@ public class Basket {
         return productId;
     }
 
-    public int getUserId() {
+    public String getUserId() {
         return userId;
     }
 
@@ -37,7 +38,7 @@ public class Basket {
         this.quantity = quantity;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
@@ -60,7 +61,7 @@ public class Basket {
         final int prime = 31;
         int result = 1;
         result = prime * result + productId;
-        result = prime * result + userId;
+        result = prime * result + userId.hashCode();
         result = prime * result + quantity;
         return result;
     }

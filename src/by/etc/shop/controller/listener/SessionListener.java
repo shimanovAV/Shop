@@ -14,6 +14,8 @@ public class SessionListener implements HttpSessionListener {
         HttpSession session = event.getSession();
         String currentLanguage = CurrentLanguage.LANGUAGE.getLanguage();
         session.setAttribute(LANGUAGE, currentLanguage);
+        Catalog.CATALOG.putIn(session);
+        Catalog.CATALOG.putStocksIn(session);
     }
     @Override
     public void sessionDestroyed(HttpSessionEvent event){}

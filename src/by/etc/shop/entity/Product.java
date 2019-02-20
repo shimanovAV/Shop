@@ -2,6 +2,7 @@ package by.etc.shop.entity;
 
 import java.util.Date;
 import java.util.Objects;
+import java.util.concurrent.TimeUnit;
 
 public class Product {
     private int id;
@@ -81,7 +82,7 @@ public class Product {
         return category;
     }
 
-    public String getStockId() {
+    public String getStockName() {
         return stockName;
     }
 
@@ -131,6 +132,16 @@ public class Product {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public boolean isNew() {
+        Date today= new Date();
+        long diff = today.getTime() - this.addingDate.getTime();
+        long days = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+        return days<=30;
+    }
+    public boolean forBoy() {
+        return this.category.equals("Boys");
     }
 
     @Override

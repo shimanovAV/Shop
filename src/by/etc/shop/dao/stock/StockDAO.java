@@ -10,7 +10,9 @@ public interface StockDAO {
 
     boolean add(Stock stock) throws DAOException;
     boolean delete(Stock stock) throws DAOException;
-    List<Stock> allStock() throws DAOException;
     boolean update(Stock stock) throws DAOException;
+    Stock getStock(String stockName) throws DAOException;
+    Stock getStock(int stockId) throws DAOException;
+    List <Stock> getAll() throws DAOException;
 
 }
