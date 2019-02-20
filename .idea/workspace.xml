@@ -7,83 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a3362a7-ab46-4813-b3c1-91f8e65d6cb1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/common/FindProductById.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/user/basket/BasketProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/user/basket/ChangeQuantity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/user/like/DeleteFromLike.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/user/like/LikeProduct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/dao/like/LikeDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/dao/like/SQLLikeDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/entity/Like.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/service/like/LikeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/service/like/LikeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/etc/shop/service/like/LikeValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/adminHeader.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/adminSales.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/like.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/allProduct.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/catalog.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4b015854-78f4-48aa-ae69-4b3f988ce5f2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4b015854-78f4-48aa-ae69-4b3f988ce5f2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/controller/command/CommandName.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/controller/command/CommandName.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/controller/command/CommandProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/controller/command/CommandProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/dao/DataBaseHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/classes/by/etc/shop/dao/DataBaseHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/errorpage.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/registrationpage.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/css/mainpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/css/mainpage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Shop_war_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/controller/command/CommandName.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/controller/command/CommandName.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/controller/command/CommandProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/controller/command/CommandProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/dao/DataBaseHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Shop/by/etc/shop/dao/DataBaseHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/controller/command/CommandName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/CommandName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/controller/command/CommandProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/CommandProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/controller/command/admin/Uppload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/admin/Picture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/controller/command/admin/product/AddProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/admin/product/AddProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/controller/command/admin/product/ChangeProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/admin/product/ChangeProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/controller/command/admin/product/DeleteProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/admin/product/DeleteProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/controller/command/admin/stock/AddStock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/admin/stock/AddStock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/controller/command/admin/stock/ChangeStock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/admin/stock/ChangeStock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/controller/command/admin/stock/DeleteStock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/admin/stock/DeleteStock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/controller/command/common/SignIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/common/SignIn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/controller/command/user/AddToBasket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/user/like/AddToLike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/controller/command/user/ChangeQuantity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/user/basket/AddToBasket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/controller/command/user/DeleteFromBasket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/command/user/basket/DeleteFromBasket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/controller/listener/Catalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/listener/Catalog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/controller/listener/SessionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/controller/listener/SessionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/dao/DAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/dao/DAOFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/dao/DataBaseHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/dao/DataBaseHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/dao/basket/BasketDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/dao/basket/BasketDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/dao/basket/SQLBasketDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/dao/basket/SQLBasketDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/dao/connector/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/dao/connector/ConnectionPool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/dao/product/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/dao/product/ProductDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/dao/product/SQLProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/dao/product/SQLProductDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/dao/stock/SQLStockDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/dao/stock/SQLStockDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/dao/stock/StockDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/dao/stock/StockDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/entity/Basket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/entity/Basket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/entity/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/entity/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/service/ServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/service/ServiceFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/service/basket/BasketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/service/basket/BasketService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/service/basket/BasketServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/service/basket/BasketServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/service/basket/BasketValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/service/basket/BasketValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/service/product/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/service/product/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/service/product/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/service/product/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/service/stock/StockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/service/stock/StockService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/etc/shop/service/stock/StockServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/etc/shop/service/stock/StockServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/text.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/text.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/text_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/text_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/text_ru.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/text_ru.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/addProduct.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/basket.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/allProduct.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/errorpage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/productpage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/registrationpage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/registrationpage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/signin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/signin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/mainpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/mainpage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -127,23 +51,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/like.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
+            <state relative-caret-position="1326">
               <caret line="78" selection-start-line="78" selection-end-line="78" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#2;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#3;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/allProduct.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/allProduct.jsp">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+            <state relative-caret-position="51">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -165,7 +92,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/WEB-INF/header.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/admin.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/adminHeader.jsp" />
         <option value="$PROJECT_DIR$/src/by/etc/shop/entity/Stock.java" />
@@ -216,6 +142,7 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/like.jsp" />
         <option value="$PROJECT_DIR$/web/header.jsp" />
         <option value="$PROJECT_DIR$/web/allProduct.jsp" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -244,8 +171,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -344,6 +269,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -621,6 +548,7 @@
       <workItem from="1550338044342" duration="16447000" />
       <workItem from="1550425245027" duration="6144000" />
       <workItem from="1550599307157" duration="6720000" />
+      <workItem from="1550687131408" duration="276000" />
     </task>
     <task id="LOCAL-00001" summary="made site, add ConnectionException, change package location">
       <created>1544629832987</created>
@@ -671,11 +599,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546994855849</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="made all functions for basket, likes, sales (namely adding, deletion, changing and getting catalog)">
+      <created>1550687354913</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1550687354913</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="486127000" />
+    <option name="totallyTimeSpent" value="486403000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -688,8 +623,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="973" height="513" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21748634" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22185792" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -769,7 +705,8 @@
     <MESSAGE value="made a changeLanguage command" />
     <MESSAGE value="made an administrative part: all functions with product(except searching), start making functions with stocks. Also change SignIn and Registration command, add new entity and databases." />
     <MESSAGE value="made an adding of a product, solved the problem with paths, made a catalog of products" />
-    <option name="LAST_COMMIT_MESSAGE" value="made an adding of a product, solved the problem with paths, made a catalog of products" />
+    <MESSAGE value="made all functions for basket, likes, sales (namely adding, deletion, changing and getting catalog)" />
+    <option name="LAST_COMMIT_MESSAGE" value="made all functions for basket, likes, sales (namely adding, deletion, changing and getting catalog)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -790,13 +727,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://4b015854-78f4-48aa-ae69-4b3f988ce5f2/schema/shop_schema/table/stock">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/by/etc/shop/controller/command/admin/stock/DeleteStock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1155,14 +1085,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/like.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
+        <state relative-caret-position="1326">
           <caret line="78" selection-start-line="78" selection-end-line="78" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#3;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1170,6 +1094,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
         </state>
       </provider>
     </entry>
