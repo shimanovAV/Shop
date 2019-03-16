@@ -1,12 +1,15 @@
 package by.etc.shop.controller.command;
 
+import by.etc.shop.controller.command.admin.order.SendOrder;
 import by.etc.shop.controller.command.admin.product.AddProduct;
 import by.etc.shop.controller.command.admin.product.ChangeProduct;
 import by.etc.shop.controller.command.admin.product.DeleteProduct;
 import by.etc.shop.controller.command.admin.stock.AddStock;
 import by.etc.shop.controller.command.admin.stock.ChangeStock;
 import by.etc.shop.controller.command.admin.stock.DeleteStock;
-import by.etc.shop.controller.command.common.FindProductById;
+import by.etc.shop.controller.command.admin.order.OrderProduct;
+import by.etc.shop.controller.command.common.finding.FindProduct;
+import by.etc.shop.controller.command.common.finding.FindProductById;
 import by.etc.shop.controller.command.common.SignOut;
 import by.etc.shop.controller.command.language.ChangeLanguage;
 import by.etc.shop.controller.command.common.Registration;
@@ -15,6 +18,10 @@ import by.etc.shop.controller.command.user.basket.AddToBasket;
 import by.etc.shop.controller.command.user.basket.BasketProduct;
 import by.etc.shop.controller.command.user.basket.ChangeQuantity;
 import by.etc.shop.controller.command.user.basket.DeleteFromBasket;
+import by.etc.shop.controller.command.user.like.ChangeLike;
+import by.etc.shop.controller.command.user.like.LikeProduct;
+import by.etc.shop.controller.command.user.order.CancelOrder;
+import by.etc.shop.controller.command.user.order.MakeOrder;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -38,6 +45,14 @@ public class CommandProvider {
        repository.put(CommandName.DELETEFROMBASKET, new DeleteFromBasket());
        repository.put(CommandName.CHANGEQUANTITY, new ChangeQuantity());
        repository.put(CommandName.BASKETPRODUCT, new BasketProduct());
+       repository.put(CommandName.CHANGELIKE, new ChangeLike());
+       repository.put(CommandName.LIKEPRODUCT, new LikeProduct());
+       repository.put(CommandName.FINDPRODUCT, new FindProduct());
+       repository.put(CommandName.CANCELORDER, new CancelOrder());
+       repository.put(CommandName.MAKEORDER, new MakeOrder());
+       repository.put(CommandName.SENDORDER, new SendOrder());
+       repository.put(CommandName.ORDERPRODUCT, new OrderProduct());
+
     }
     public Command getCommand(String name) throws CommandException{
         CommandName commandName =null;

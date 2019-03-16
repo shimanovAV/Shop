@@ -65,6 +65,21 @@ public class ProductServiceImpl implements ProductService {
         }
     }
 
+    public List<Product> getAllBy(String productInfo) throws ServiceException{
+        try {
+            DAOFactory daoObjectFactory = DAOFactory.getInstance();
+            ProductDAO productDAO = daoObjectFactory.getProductDAO();
+            if(productInfo!=null) {
+                productInfo = '%' + productInfo + '%';
+                return productDAO.allProductBy(productInfo);
+            } else{
+                return productDAO.allProduct();
+            }
+        } catch(DAOException e){
+            throw new ServiceException(e);
+        }
+    }
+
     public Product getProductById(int productID) throws ServiceException{
         try{
             if (productID > WRONG_PRODUCT_ID){

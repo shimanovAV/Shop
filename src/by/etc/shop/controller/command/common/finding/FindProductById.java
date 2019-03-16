@@ -1,4 +1,4 @@
-package by.etc.shop.controller.command.common;
+package by.etc.shop.controller.command.common.finding;
 
 import by.etc.shop.controller.command.Command;
 import by.etc.shop.controller.command.CommandException;

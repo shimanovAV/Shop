@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-public class AddToLike implements Command {
+public class ChangeLike implements Command {
 
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws CommandException {
         try {
@@ -29,9 +29,9 @@ public class AddToLike implements Command {
             like = new Like(productId, userId);
             ServiceFactory serviceFactory = ServiceFactory.getInstance();
             LikeService likeService = serviceFactory.getLikeService();
-            if(likeService.addToLike(like)){
+            if(likeService.changeLike(like)){
                 RequestDispatcher dispatcher = req.getRequestDispatcher(page);
-                Catalog.CATALOG.putIn(req.getSession());
+                Catalog.CATALOG.putLikeIn(req.getSession());
                 if (dispatcher != null) {
                     dispatcher.forward(req, resp);
                 }

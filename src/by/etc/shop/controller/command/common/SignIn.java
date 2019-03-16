@@ -43,6 +43,8 @@ public class SignIn implements Command {
             User user = clientService.singIn(login, password);
             if (user != null) {
                 session.setAttribute(USER, user);
+                Catalog.CATALOG.putLikeIn(session);
+                Catalog.CATALOG.putOrderIn(session);
                 if(user.isAccessLevel()){
                     page=ADMIN_PAGE;
                     RequestDispatcher dispatcher = req.getRequestDispatcher(page);

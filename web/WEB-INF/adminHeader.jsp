@@ -39,12 +39,14 @@
                 <a class="lang" href="ChangeLanguage?Command=CHANGELANGUAGE&language=ru&page=${pageContext.request.requestURL}">${langRu}</a>
             </c:if>
         </div>
-        <div class="search-box">
-            <input class="search-txt" type="search" placeholder=${search}>
-            <div class="search-btn">
-                <a> <i class="fa fa-search"></i></a>
+        <form action="FindProductByInfo" method="post">
+            <div class="search-box">
+                <input type="hidden" name="Command" value="FindProduct"/>
+                <input type="hidden" name="page" value="${pageContext.request.requestURL}" />
+                <input class="search-txt" type="text" name="productInfo" placeholder=${search}>
+                <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
             </div>
-        </div>
+        </form>
         <c:if test="${sessionScope.user==null}" var="isLogin">
             <a class="text-right" href="Signin" data-target="#signin"
                data-toggle="modal">${signIn}</a>/<a href="Registrate" data-target="#registrate"
@@ -91,7 +93,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav m-md-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">${New}</a>
+                        <a class="nav-link" href="OrderProduct?Command=ORDERPRODUCT">Orders</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="catalog.jsp">${catalog}</a>

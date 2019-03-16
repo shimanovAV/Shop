@@ -27,6 +27,13 @@
         <url-pattern>/ChangeStock</url-pattern>
         <url-pattern>/DeleteFromBasket</url-pattern>
         <url-pattern>/ChangeQuantity</url-pattern>
+        <url-pattern>/ChangeLike</url-pattern>
+        <url-pattern>/LikeProduct</url-pattern>
+        <url-pattern>/FindProductByInfo</url-pattern>
+        <url-pattern>/MakeOrder</url-pattern>
+        <url-pattern>/CancelOrder</url-pattern>
+        <url-pattern>/OrderProduct</url-pattern>
+        <url-pattern>/SendOrder</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -36,6 +43,42 @@
     <servlet-mapping>
         <servlet-name>AdminPage</servlet-name>
         <url-pattern>/Admin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminOrderPage</servlet-name>
+        <jsp-file>/WEB-INF/adminorder.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminOrderPage</servlet-name>
+        <url-pattern>/AdminOrderPage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminHeader</servlet-name>
+        <jsp-file>/WEB-INF/adminHeader.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminHeader</servlet-name>
+        <url-pattern>/AdminHeader</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>OrderPage</servlet-name>
+        <jsp-file>/WEB-INF/orderpage.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OrderPage</servlet-name>
+        <url-pattern>/OrderPage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FindPage</servlet-name>
+        <jsp-file>/findpage.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FindPage</servlet-name>
+        <url-pattern>/FindPage</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -72,6 +115,15 @@
     <servlet-mapping>
         <servlet-name>SignInPage</servlet-name>
         <url-pattern>/GoToSignIn</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LikePage</servlet-name>
+        <jsp-file>/WEB-INF/like.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LikePage</servlet-name>
+        <url-pattern>/LikePage</url-pattern>
     </servlet-mapping>
 
     <listener>

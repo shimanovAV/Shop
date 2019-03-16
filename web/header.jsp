@@ -40,12 +40,14 @@
                 <a class="lang" href="ChangeLanguage?Command=CHANGELANGUAGE&language=ru&page=${pageContext.request.requestURL}">${langRu}</a>
             </c:if>
         </div>
-        <div class="search-box">
-            <input class="search-txt" type="search" placeholder=${search}>
-            <div class="search-btn">
-                <a> <i class="fa fa-search"></i></a>
-            </div>
-        </div>
+            <form action="FindProductByInfo" method="post">
+                <div class="search-box">
+                <input type="hidden" name="Command" value="FindProduct"/>
+                    <input type="hidden" name="page" value="${pageContext.request.requestURL}" />
+                <input class="search-txt" type="text" name="productInfo" placeholder=${search}>
+                    <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
         <c:if test="${sessionScope.user==null}" var="isLogin">
             <a class="text-right" href="Signin" data-target="#signin"
                data-toggle="modal">${signIn}</a>/<a href="Registrate" data-target="#registrate"
@@ -60,6 +62,9 @@
 
         <a href="LikeProduct?Command=LIKEPRODUCT">
             <i class="fas fa-heart fa-2x"style="color:#8d6e63"></i></a>
+
+        <a href="OrderProduct">
+            <i class="fas fa-list-alt fa-2x"style="color:#8d6e63"></i></a>
 
         <div class="modal" id="signin">
             <div class="modal-dialog">

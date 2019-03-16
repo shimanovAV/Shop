@@ -14,10 +14,14 @@ import javax.servlet.http.HttpServletResponse;
 import by.etc.shop.controller.command.CommandException;
 
 import java.io.IOException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @WebServlet({"/Relay"})
 @MultipartConfig
 public class Controller extends HttpServlet {
+
+    private static Logger logger = LogManager.getLogger(Controller.class);
 
     public static final String SIGN_IN = "SignIn";
     public static final String REGISTRATION = "Registration";
@@ -38,7 +42,7 @@ public class Controller extends HttpServlet {
             Command command = provider.getCommand(commandName);
            command.execute(req, resp);
         } catch(CommandException e){
-            e.printStackTrace();
+            logger.error(e);
         }
     }
 
@@ -49,7 +53,7 @@ public class Controller extends HttpServlet {
         Command command = provider.getCommand(commandName);
            command.execute(req, resp);
         } catch(CommandException e){
-            e.printStackTrace();
+            logger.error(e);
         }
     }
 }

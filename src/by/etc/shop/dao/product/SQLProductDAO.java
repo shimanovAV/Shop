@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.LinkedList;
 import java.util.List;
 
 public class SQLProductDAO implements ProductDAO {
@@ -19,7 +20,7 @@ public class SQLProductDAO implements ProductDAO {
             "adding_date, path_to_image) VALUES(?,?,?,?,?,?,?)";
     public static final String DELETE_ALL_ID = "delete from product where id = ?";
     public static final String DELETE_PRODUCT_IN_BASKET = "delete from basket where productId = ?";
-    public static final String DELETE_PRODUCT_IN_LIKE = "delete from like where productId = ?";
+    public static final String DELETE_PRODUCT_IN_LIKE = "delete from heart where productId = ?";
     public static final String SELECT_ALL = "select * from product";
     public static final String UPDATE_WHERE_ID = "UPDATE product SET name=?," +
             "description = ?, category = ?, price = ?," +
@@ -27,6 +28,10 @@ public class SQLProductDAO implements ProductDAO {
             "old_price = ?, path_to_image = ? WHERE id = ?";
     public static final String SELECT_PATH_BY_ID = "select path_to_image from product where id = ?";
     public static final String SELECT_FROM_PRODUCT_WHERE_ID = "select * from product where id = ?";
+    public static final String SELECT_FROM_PRODUCT_BY_INFO = "SELECT * FROM product WHERE name LIKE ? OR" +
+            " description LIKE ?";
+    public static final String SELECT_QUANTITY_FROM_PRODUCT_BY_ID = "SELECT quantity FROM product WHERE id = ?";
+
     private DataBaseHelper helper = new DataBaseHelper();
 
     @Override
@@ -189,6 +194,60 @@ public class SQLProductDAO implements ProductDAO {
             this.helper.closeStatement(statement);
             this.helper.returnConnection();
             return product;
+        }
+    }
+
+    public List<Product> allProductBy(String productInfo)throws DAOException {
+        PreparedStatement statement = null;
+        ResultSet rs = null;
+        List<Product> products = new LinkedList<>();
+        try {
+            helper.setQuery(SELECT_FROM_PRODUCT_BY_INFO);
+            statement = helper.getPreparedStatement();
+            statement.setString(1, productInfo);
+            statement.setString(2, productInfo);
+            rs = statement.executeQuery();
+            while (rs.next()) {
+                int productID = rs.getInt(1);
+                String name = rs.getString(2);
+                String description = rs.getString(3);
+                String category = rs.getString(4);
+                double price = rs.getDouble(5);
+                int quantity = rs.getInt(6);
+                Date addingDate = rs.getDate(7);
+                String stockName = rs.getString(8);
+                double oldPrice = rs.getDouble(9);
+                String pathToPicture = rs.getString(10);
+                products.add(new Product(productID, name, description, category, price, quantity,
+                        addingDate, stockName, oldPrice, pathToPicture));
+            }
+        } catch (SQLException e) {
+            throw new DAOException(e);
+        } finally {
+            this.helper.closeStatement(statement);
+            this.helper.returnConnection();
+            return products;
+        }
+    }
+
+    public int getQuantity(int productId, int productQuantity) throws DAOException{
+        PreparedStatement statement = null;
+        ResultSet rs = null;
+        int quantity = 0;
+        try {
+            helper.setQuery(SELECT_QUANTITY_FROM_PRODUCT_BY_ID);
+            statement = helper.getPreparedStatement();
+            statement.setInt(1, productId);
+            rs = statement.executeQuery();
+            if (rs.next()) {
+                quantity = rs.getInt(1);
+            }
+        } catch (SQLException e) {
+            throw new DAOException(e);
+        } finally {
+            this.helper.closeStatement(statement);
+            this.helper.returnConnection();
+            return quantity - productQuantity;
         }
     }
 }

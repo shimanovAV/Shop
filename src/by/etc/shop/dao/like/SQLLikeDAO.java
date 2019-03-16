@@ -13,16 +13,18 @@ import java.util.Date;
 import java.util.List;
 
 public class SQLLikeDAO implements LikeDAO {
-    public static final String INSERT_ALL_FIELDS = "INSERT INTO like(productId, userId)" +
+    public static final String INSERT_ALL_FIELDS = "INSERT INTO heart(productId, userId)" +
             " VALUES(?,?)";
-    public static final String DELETE_ALL_ID= "delete from like where productId = ? and userId=? LIMIT 1";
-    public static final String SELECT_PRODUCTID = "select productId from like where userId = ?";
+    public static final String DELETE_ALL_ID= "delete from heart where productId = ? and userId=? LIMIT 1";
+    public static final String SELECT_PRODUCTID = "select productId from heart where userId = ?";
     /*public static final String SELECT_ALL_FOR_ONE_USER= "select prod.id, prod.name, prod.price, " +
             "prod.adding_date, prod.stock_name, prod.old_price, prod.path_to_image, " +
             "bask.quantity from ( select *, row_number()over(order by productId) npp " +
             "from basket where userId=?)bask left join(select *, row_number()over(order by id) npp " +
             "from  product where id=28)prod  on prod.npp=bask.npp";*/
     public static final String SELECT_PRODUCT = "select * from product where id = ?";
+    public static final String SELECT_FROM_LIKE_WHERE_ID= "select * from heart where productId = ? and userId = ? ";
+
 
     private DataBaseHelper helper = new DataBaseHelper();
     @Override
@@ -83,11 +85,11 @@ public class SQLLikeDAO implements LikeDAO {
                     String description = rs1.getString(3);
                     String category = rs1.getString(4);
                     double price = rs1.getDouble(5);
+                    int quantity = rs1.getInt(6);
                     Date addingDate = rs1.getDate(7);
                     String stockName = rs1.getString(8);
                     double oldPrice = rs1.getDouble(9);
                     String pathToPicture = rs1.getString(10);
-                    int quantity = rs.getInt(2);
                     product = new Product(id, name, description, category, price, quantity,
                             addingDate, stockName, oldPrice, pathToPicture);
                     products.add(product);
@@ -100,6 +102,27 @@ public class SQLLikeDAO implements LikeDAO {
             helper.closeStatement(statement);
             helper.returnConnection();
             return products;
+        }
+    }
+
+    public boolean hasLike(Like like) throws DAOException{
+        PreparedStatement statement = null;
+        ResultSet rs = null;
+        try {
+            helper.setQuery(SELECT_FROM_LIKE_WHERE_ID);
+            statement = helper.getPreparedStatement();
+            statement.setInt(1, like.getProductId());
+            statement.setString(2, like.getUserId());
+            rs = statement.executeQuery();
+            if (rs.next()) {
+                return true;
+            }
+            return false;
+        } catch (SQLException e) {
+            throw new DAOException(e);
+        } finally {
+            this.helper.closeStatement(statement);
+            this.helper.returnConnection();
         }
     }
 }

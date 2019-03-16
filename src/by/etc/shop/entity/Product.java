@@ -1,6 +1,10 @@
 package by.etc.shop.entity;
 
+import by.etc.shop.service.ServiceFactory;
+import by.etc.shop.service.like.LikeService;
+
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
@@ -144,6 +148,13 @@ public class Product {
         return this.category.equals("Boys");
     }
 
+    public boolean hasLike(List<Product> likes){
+        if(likes!=null) {
+            return likes.contains(this);
+        }
+        return false;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -152,8 +163,6 @@ public class Product {
         return id == product.id &&
                 Double.compare(product.price, price) == 0 &&
                 quantity == product.quantity &&
-                stockName.equals(product.stockName) &&
-                Double.compare(product.oldPrice, oldPrice) == 0 &&
                 name.equals(product.name) &&
                 addingDate.equals(product.addingDate)&&
                 description.equals(product.description) &&

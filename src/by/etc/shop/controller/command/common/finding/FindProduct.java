@@ -1,13 +1,11 @@
-package by.etc.shop.controller.command.user.basket;
+package by.etc.shop.controller.command.common.finding;
 
 import by.etc.shop.controller.command.Command;
 import by.etc.shop.controller.command.CommandException;
-import by.etc.shop.entity.Basket;
+import by.etc.shop.controller.listener.Catalog;
 import by.etc.shop.entity.Product;
-import by.etc.shop.entity.User;
 import by.etc.shop.service.ServiceException;
 import by.etc.shop.service.ServiceFactory;
-import by.etc.shop.service.basket.BasketService;
 import by.etc.shop.service.product.ProductService;
 
 import javax.servlet.RequestDispatcher;
@@ -16,32 +14,28 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.LinkedList;
 import java.util.List;
 
-public class BasketProduct implements Command {
-    public static final String BASKET_PAGE = "/BasketPage";
+public class FindProduct implements Command {
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws CommandException {
+        String page = "/FindPage";
         try {
             HttpSession session = req.getSession();
-            User user = (User)req.getSession().getAttribute("user");
-            String userLogin = user.getLogin();
             ServiceFactory serviceFactory = ServiceFactory.getInstance();
-            BasketService basketService = serviceFactory.getBasketService();
-            List<Product> basket = basketService.getAllFromBasket(userLogin);
-            if(basket!=null){
-                session.setAttribute("basket", basket);
-                req.setAttribute("summ", Basket.countSumm(basket));
-                RequestDispatcher dispatcher = req.getRequestDispatcher(BASKET_PAGE);
-                if(dispatcher!=null){
+            ProductService productService = serviceFactory.getProductService();
+            String productInfo = req.getParameter("productInfo");
+            List<Product> products = productService.getAllBy(productInfo);
+            if(products!=null){
+                RequestDispatcher dispatcher = req.getRequestDispatcher(page);
+                Catalog.CATALOG.putIn(session, products);
+                if (dispatcher != null) {
                     dispatcher.forward(req, resp);
                 }
-            }
-            else{
+            } else{
                 session.setAttribute("error", true);
                 resp.sendRedirect("anotherPage");
             }
-        } catch (ServiceException| ServletException | IOException e){
+        } catch (IOException | ServiceException |ServletException e) {
             throw new CommandException(e);
         }
     }

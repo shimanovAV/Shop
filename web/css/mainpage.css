@@ -29,7 +29,7 @@
  .search-box{
      position: absolute;
      top: 2%;
-     left: 60%;
+     left: 80%;
      transform: translate(-50%, -50%);
      background:#f8f9fa;
      height: 20px;
@@ -41,6 +41,7 @@
  }
 
  .search-btn{
+     background: none;
      color: #8d6e63;
      float: right;
      width: 20px;
@@ -65,6 +66,7 @@ cursor: pointer;
      background-color: #8d6e63;
      color: #8d6e63;
  }
+
 
 
 

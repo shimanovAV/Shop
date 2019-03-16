@@ -9,6 +9,8 @@ public interface ProductDAO {
     boolean add(Product product) throws DAOException;
     boolean delete(int productID) throws DAOException;
     List<Product> allProduct() throws DAOException;
+    List<Product> allProductBy(String productInfo) throws DAOException;
     boolean update(Product product) throws DAOException;
     Product getProductById(int productID) throws DAOException;
+    int getQuantity(int productId, int productQuantity) throws DAOException;
 }

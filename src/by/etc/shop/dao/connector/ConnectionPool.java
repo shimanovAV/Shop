@@ -58,8 +58,10 @@ public enum ConnectionPool {
                 if (!connection.getAutoCommit()) {
                     connection.commit();
                 }
-                activePool.remove(connection);
-                passivePool.put(connection);
+                if(activePool.size()!=0){
+                    activePool.remove(connection);
+                    passivePool.put(connection);
+                }
             } catch (SQLException | InterruptedException e){
                 throw new ConnectionException(e);
             }

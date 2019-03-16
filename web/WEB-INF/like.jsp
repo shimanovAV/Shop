@@ -19,18 +19,6 @@
         <div class="col-lg-3 col-md-6 mb-4">
             <div class="card">
                 <div class="view overlay">
-                    <button type="button" data-target="#DeleteFromLike"
-                            data-toggle="modal" class="dropbtn" data-dismiss="modal" title="${product.id}">
-                        <i class="fa fa-trash-o" style="color:#8d6e63"></i></button>
-
-                    <script type="text/javascript">
-                        $(document).ready(function(){
-                            $('.dropbtn').on('click', (function(){
-                                var title  = $(this).attr('title')
-                                $('.productID').val(title);
-                            }))
-                        })
-                    </script>
                     <a href="FindProduct?Command=FINDPRODUCTBYID&productID=${product.id}">
                         <img class="card-img-top" src="${product.path}"></a>
                 </div>
@@ -55,48 +43,6 @@
         </c:if>
         </c:forEach>
 </section>
-
-<script>
-    function btnclick() {
-        activebtn.style.backgroundColor = disactiveclr;
-        (activebtn = this).style.backgroundColor = activeclr;
-    }
-    var disactiveclr = "#F6F6f6";
-    var activeclr = "#fc0707";
-    var activebtn = null;
-    function ld(){
-        activebtn = document.getElementById("b1");
-        for(var i=1; i<5; ++i) document.getElementById("b"+i).onclick=btnclick;
-        alert("ready");
-    }
-</script>
-<body onload="ld();">
-<input type="button"  id=b1 style="background: #fc0707;" value="Кнопка1">
-<input type="button"  id=b2 style="background: #F6F6f6;" value="Кнопка2">
-<input type="button"  id=b3 style="background: #F6F6f6;" value="Кнопка3">
-<input type="button"  id=b4 style="background: #F6F6f6;" value="Кнопка4">
-</body>
-
-<div class="modal" id="DeleteFromLike">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Do you want to delete the product?</h3>
-                <button type="button" class="close" data-dismiss="modal"> &times;</button>
-            </div>
-            <div class="modal-body">
-                <form class="form-group" action="DeleteFromBasket" method="post">
-                    <input type="hidden" name="Command" value="DeleteFromBasket"/>
-                    <input type="hidden" name="page" value=${pageContext.request.requestURL}/>
-                    <input class="productID" type="hidden" name="productID" value=""/>
-                    <input class="productQuantity" type="hidden" name="productQuantity" value=""/>
-                    <input class="btn" type="submit"  value="Yes"/><br/>
-                </form>
-                <input class="btn"  type="submit" data-dismiss="modal" value="No"/><br/>
-            </div>
-        </div>
-    </div>
-</div>
 
 </body>
 </html>

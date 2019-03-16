@@ -48,6 +48,42 @@
             </c:if>
             <h2>${product.name}</h2>
         </div>
+
+        <c:if test="${sessionScope.user!=null&&!(sessionScope.user.isAccessLevel())}">
+        <form class="form-group" action="ChangeLike" method="post">
+            <input type="hidden" name="Command" value="ChangeLike"/>
+            <input type="hidden" name="page" value="${pageContext.request.requestURL}" />
+            <input type="hidden" name="productId" value="${product.id}" />
+            <input type="hidden" name="userId" value="${sessionScope.user.login}" />
+        <button type="submit" class="close" >
+            <c:if test="${product.hasLike(sessionScope.likes)}" var="isLogin">
+            <i onclick="changeColor()" class="fa fa-heart" id="changeColor"  style="color:#8d6e63"></i></button>
+            </c:if>
+            <c:if test="${!(product.hasLike(sessionScope.likes))}" var="isLogin">
+                <i onclick="changeColor()" class="fa fa-heart" id="changeColor"  style="color:#e0b8a6"></i></button>
+            </c:if>
+        </form>
+        </c:if>
+        <c:if test="${sessionScope.user==null}" var="isLogin">
+            <form class="form-group" action="GoToSignIn" method="post">
+                <button type="submit" class="close" >
+                    <i onclick="changeColor()" class="fa fa-heart"   style="color:#e0b8a6"></i></button>
+            </form>
+        </c:if>
+        <script type="text/javascript">
+            var flag = true;
+            function changeColor(){
+                if (flag == true) {
+                    $('#changeColor').css('color', '#8d6e63');
+                    flag = false;
+                }
+                else {
+                    $('#changeColor').css('color', '#e0b8a6');
+                    flag = true;
+                }
+            }
+        </script>
+
             <c:if test="${sessionScope.user!=null&&!(sessionScope.user.isAccessLevel())}">
                 <form class="form-group" action="AddToBasket" method="post">
                     <input type="hidden" name="Command" value="AddToBasket"/>

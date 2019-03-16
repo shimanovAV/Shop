@@ -11,5 +11,5 @@ public interface ProductService {
     boolean update(Product product) throws ServiceException;
     Product getProductById(int productID) throws ServiceException;
     List<Product> getAll() throws ServiceException;
-
+    List<Product> getAllBy(String productInfo) throws ServiceException;
 }

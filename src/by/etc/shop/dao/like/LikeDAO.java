@@ -10,4 +10,5 @@ public interface LikeDAO {
     boolean add(Like like) throws DAOException;
     boolean delete(Like like) throws DAOException;
     List<Product> allProduct(String userLogin) throws DAOException;
+    boolean hasLike(Like like) throws DAOException;
 }

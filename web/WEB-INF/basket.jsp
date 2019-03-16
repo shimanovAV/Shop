@@ -12,9 +12,12 @@
     <link href="css/mainpage.css" rel="stylesheet">
 </head>
 <body>
+<button type="button" data-target="#MakeOrder"
+        data-toggle="modal" class="dropbtn" data-dismiss="modal">
+    <i class="fa fa-trash-o" style="color:#8d6e63"></i></button>
 <section class="text-center md-4">
     <div class="row wow fadeIn">
-        <jsp:useBean id="basket" scope="request" type="java.util.List"/>
+        <jsp:useBean id="basket" scope="session" type="java.util.List"/>
         <c:forEach items="${basket}" var="product" varStatus="productCount">
         <div class="col-lg-3 col-md-6 mb-4">
             <div class="card">
@@ -69,6 +72,7 @@
         </c:if>
         </c:forEach>
 </section>
+
 <div class="modal" id="DeleteFromBasket">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -89,6 +93,35 @@
         </div>
     </div>
 </div>
+
+<div class="modal" id="MakeOrder">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Do you want to make an order?</h3>
+                <button type="button" class="close" data-dismiss="modal"> &times;</button>
+            </div>
+            <div class="modal-body">
+                <form class="form-group" action="MakeOrder" method="post">
+                    <input type="hidden" name="Command" value="MakeOrder"/>
+                    <input type="hidden" name="userId" value="${sessionScope.user.login}"/>
+                    <input type="hidden" name="summ" value="${requestScope.summ}"/>
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn">
+                            <input type="radio" name="courier" value="true" autocomplete="off" checked>Courier
+                        </label>
+                        <label class="btn">
+                            <input type="radio" name="courier" value="false" autocomplete="off" >Pickup
+                        </label>
+                    </div>
+                    <input class="btn" type="submit"  value="Yes"/><br/>
+                </form>
+                <input class="btn"  type="submit" data-dismiss="modal" value="No"/><br/>
+            </div>
+        </div>
+    </div>
+</div>
+
 <nav class="navbar fixed-bottom navbar-light bg-light">
     <form class="form-inline">
         <button class="btn btn-outline-success" type="button">Save changes</button>

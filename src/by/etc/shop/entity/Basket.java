@@ -1,5 +1,7 @@
 package by.etc.shop.entity;
 
+import java.util.Iterator;
+import java.util.List;
 import java.util.Objects;
 
 public class Basket {
@@ -73,5 +75,15 @@ public class Basket {
                 ", userId=" + userId +
                 ", quantity=" + quantity +
                 '}';
+    }
+
+    public static double countSumm(List<Product> products){
+        double summ = 0.0;
+        Iterator<Product> iterator = products.iterator();
+        while (iterator.hasNext()){
+            Product product = iterator.next();
+            summ+=product.getPrice()*product.getQuantity();
+        }
+        return summ;
     }
 }
