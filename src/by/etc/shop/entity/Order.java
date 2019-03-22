@@ -3,9 +3,12 @@ package by.etc.shop.entity;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Objects;
+
 
 public class Order {
+    private static final int SHIFT = 31;
+    private static final int START = 1;
+    private static final double START_SUMM = 0.0;
     private int id;
     private Date orderDate;
     private double summ;
@@ -84,13 +87,13 @@ public class Order {
 
     @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
+        final int prime = SHIFT;
+        int result = START;
         result = prime * result + id;
         result = prime * result + orderDate.hashCode();
-        result = prime * result + (int)summ;
+        result = prime * result + (int) summ;
         result = prime * result + userId.hashCode();
-        result = prime * result + ((Boolean)courier).compareTo(false);
+        result = prime * result + ((Boolean) courier).compareTo(false);
         return result;
     }
 
@@ -104,12 +107,13 @@ public class Order {
                 ", courier=" + courier +
                 '}';
     }
-    public static double countSumm(List<Product> products){
-        double summ = 0.0;
+
+    public static double countSumm(List<Product> products) {
+        double summ = START_SUMM;
         Iterator<Product> iterator = products.iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             Product product = iterator.next();
-            summ+=product.getPrice()*product.getQuantity();
+            summ += product.getPrice() * product.getQuantity();
         }
         return summ;
     }

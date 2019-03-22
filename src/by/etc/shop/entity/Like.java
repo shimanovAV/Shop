@@ -2,17 +2,13 @@ package by.etc.shop.entity;
 
 public class Like {
 
+    private static final int SHIFT = 31;
+    private static final int START = 1;
     private int productId;
     private String userId;
 
 
-
     public Like() {
-    }
-
-    public Like(int productId, String userId, int quantity) {
-        this.productId = productId;
-        this.userId = userId;
     }
 
     public Like(int productId, String userId) {
@@ -47,8 +43,8 @@ public class Like {
 
     @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
+        final int prime = SHIFT;
+        int result = START;
         result = prime * result + productId;
         result = prime * result + userId.hashCode();
         return result;

@@ -93,7 +93,7 @@ public class SQLProductDAO implements ProductDAO {
             helper.commit(statementBasketDB);
             helper.commit(statementProductDB);
             return true;
-        } catch (SQLException | IOException e) {
+        } catch (SQLException  e) {
             helper.rollBack(statementLikeDB);
             helper.rollBack(statementBasketDB);
             helper.rollBack(statementProductDB);

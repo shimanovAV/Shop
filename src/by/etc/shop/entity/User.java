@@ -2,10 +2,11 @@ package by.etc.shop.entity;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.Objects;
 
 public class User implements Serializable {
     private static final long serialVersionUID = 6259612578312780114L;
+    private static final int SHIFT = 31;
+    private static final int START = 1;
 
     private String userName;
     private String login;
@@ -112,14 +113,14 @@ public class User implements Serializable {
                 email.equals(user.email) &&
                 address.equals(user.address) &&
                 birthday.equals(user.birthday) &&
-                phoneNumber.equals(user.phoneNumber)&&
-                accessLevel==user.accessLevel;
+                phoneNumber.equals(user.phoneNumber) &&
+                accessLevel == user.accessLevel;
     }
 
     @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
+        final int prime = SHIFT;
+        int result = START;
         result = prime * result + numberOfCard;
         result = prime * result + userName.hashCode();
         result = prime * result + login.hashCode();
@@ -127,8 +128,9 @@ public class User implements Serializable {
         result = prime * result + address.hashCode();
         result = prime * result + birthday.hashCode();
         result = prime * result + phoneNumber.hashCode();
-        result = prime * result + ((Boolean)accessLevel).compareTo(false);
-        return result; }
+        result = prime * result + ((Boolean) accessLevel).compareTo(false);
+        return result;
+    }
 
     @Override
     public String toString() {

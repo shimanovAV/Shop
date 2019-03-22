@@ -3,7 +3,7 @@ package by.etc.shop.controller;
 import by.etc.shop.controller.command.Command;
 import by.etc.shop.controller.command.CommandProvider;
 
-import javax.servlet.RequestDispatcher;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import by.etc.shop.controller.command.CommandException;
 
 import java.io.IOException;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -23,9 +24,6 @@ public class Controller extends HttpServlet {
 
     private static Logger logger = LogManager.getLogger(Controller.class);
 
-    public static final String SIGN_IN = "SignIn";
-    public static final String REGISTRATION = "Registration";
-    public static final String URL_TO_ERROR_PAGE = "/errorpage";
     public static final String COMMAND = "Command";
 
     public Controller() {
@@ -36,24 +34,26 @@ public class Controller extends HttpServlet {
 
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String commandName = req.getParameter(COMMAND);
-        try{
+        try {
             Command command = provider.getCommand(commandName);
-           command.execute(req, resp);
-        } catch(CommandException e){
+            command.execute(req, resp);
+        } catch (CommandException e) {
             logger.error(e);
+            resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         }
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String commandName = req.getParameter(COMMAND);
-        try{
-        Command command = provider.getCommand(commandName);
-           command.execute(req, resp);
-        } catch(CommandException e){
+        try {
+            Command command = provider.getCommand(commandName);
+            command.execute(req, resp);
+        } catch (CommandException e) {
             logger.error(e);
+            resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         }
     }
 }

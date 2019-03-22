@@ -21,10 +21,11 @@ public class ChangeLanguage implements Command {
         CurrentLanguage.LANGUAGE.setLanguage(language);
         session.setAttribute(LANGUAGE, language);
         String page = req.getParameter(PAGE);
-        try{
-        if(page != null) {
-            resp.sendRedirect(page);
-        }} catch (IOException e){
+        try {
+            if (page != null) {
+                resp.sendRedirect(page);
+            }
+        } catch (IOException e) {
             throw new CommandException(e);
         }
     }

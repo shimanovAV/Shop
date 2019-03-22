@@ -12,39 +12,35 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
 
 public class AddStock implements Command {
-    public static final String ADMIN_PAGE = "/Admin";
+    public static final String ADMIN_SALE_PAGE = "/adminSales";
+    public static final String NAME_PARAM = "name";
+    public static final String PERCENT_SIZE_PARAM = "percentSize";
+    public static final String EXPIRE_DATE_PARAM = "expireDate";
+    public static final String DATE_FORMAT = "yyyy-MM-dd";
 
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws CommandException {
         try {
-            String page = req.getParameter("page");
-            String name = req.getParameter("name");
-            byte percentSize = Byte.parseByte(req.getParameter("percentSize"));
-            String dateString = req.getParameter("expireDate");
-            Date expireDate=new SimpleDateFormat("yyyy-MM-dd").parse(dateString);
+            String name = req.getParameter(NAME_PARAM);
+            byte percentSize = Byte.parseByte(req.getParameter(PERCENT_SIZE_PARAM));
+            String dateString = req.getParameter(EXPIRE_DATE_PARAM);
+            Date expireDate = new SimpleDateFormat(DATE_FORMAT).parse(dateString);
             Stock stock = new Stock(name, percentSize, expireDate);
             ServiceFactory serviceFactory = ServiceFactory.getInstance();
             StockService stockService = serviceFactory.getStockService();
-            if(stockService.add(stock)){
-                page=ADMIN_PAGE;
-                RequestDispatcher dispatcher = req.getRequestDispatcher(page);
+            if (stockService.add(stock)) {
+                RequestDispatcher dispatcher = req.getRequestDispatcher(ADMIN_SALE_PAGE);
                 Catalog.CATALOG.putStocksIn(req.getSession());
                 if (dispatcher != null) {
                     dispatcher.forward(req, resp);
                 }
-            }
-            else{
-                HttpSession session = req.getSession();
-                session.setAttribute("error", true);
-                resp.sendRedirect("anotherPage");
+            } else {
+                resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             }
         } catch (ServiceException | IOException | ServletException | ParseException e) {
             throw new CommandException(e);

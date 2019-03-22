@@ -5,7 +5,9 @@ public enum CurrentLanguage {
 
     private static String language;
 
-    static{language="ru";}
+    public static final String START_LANGUAGE = "ru";
+
+    static{language= START_LANGUAGE;}
 
     CurrentLanguage() {}
 

@@ -34,6 +34,8 @@
         <url-pattern>/CancelOrder</url-pattern>
         <url-pattern>/OrderProduct</url-pattern>
         <url-pattern>/SendOrder</url-pattern>
+        <url-pattern>/NewProduct</url-pattern>
+        <url-pattern>/ProductsOnSales</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -43,6 +45,15 @@
     <servlet-mapping>
         <servlet-name>AdminPage</servlet-name>
         <url-pattern>/Admin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Header</servlet-name>
+        <jsp-file>/header.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Header</servlet-name>
+        <url-pattern>/Header</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -118,6 +129,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>StartPage</servlet-name>
+        <jsp-file>/index.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StartPage</servlet-name>
+        <url-pattern>/Start</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>LikePage</servlet-name>
         <jsp-file>/WEB-INF/like.jsp</jsp-file>
     </servlet>
@@ -125,6 +145,35 @@
         <servlet-name>LikePage</servlet-name>
         <url-pattern>/LikePage</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>NewProductPage</servlet-name>
+        <jsp-file>/newproducts.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NewProductPage</servlet-name>
+        <url-pattern>/NewProducts</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ProductsOnSale</servlet-name>
+        <jsp-file>/saleproduct.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProductsOnSale</servlet-name>
+        <url-pattern>/ProductOnSales</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ProductsInBasket</servlet-name>
+        <jsp-file>/WEB-INF/all_product_in_basket.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProductsInBasket</servlet-name>
+        <url-pattern>/ProductsInBasket</url-pattern>
+    </servlet-mapping>
+
+
 
     <listener>
         <listener-class>by.etc.shop.controller.listener.SessionListener</listener-class>
@@ -150,5 +199,31 @@
         <filter-name>EncodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+
+    <jsp-config>
+        <taglib>
+            <taglib-uri>customtags</taglib-uri>
+            <taglib-location>/WEB-INF/tld/custom.tld</taglib-location>
+        </taglib>
+    </jsp-config>
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/WEB-INF/error/serverError.jsp</location>
+    </error-page>
+
+
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/error/notFoundError.jsp</location>
+    </error-page>
+
+
+
+    <error-page>
+        <exception-type>java.lang.RuntimeException</exception-type>
+        <location>/WEB-INF/error/serverError.jsp</location>
+    </error-page>
 
 </web-app>

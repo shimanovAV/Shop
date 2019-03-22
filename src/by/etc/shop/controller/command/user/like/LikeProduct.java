@@ -12,32 +12,31 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
 public class LikeProduct implements Command {
     public static final String LIKE_PAGE = "/LikePage";
+    public static final String USER_PARAM = "user";
+    public static final String LIKES_ATTRIBUTE = "likes";
+
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws CommandException {
         try {
-            User user = (User)req.getSession().getAttribute("user");
+            User user = (User) req.getSession().getAttribute(USER_PARAM);
             String userLogin = user.getLogin();
             ServiceFactory serviceFactory = ServiceFactory.getInstance();
             LikeService likeService = serviceFactory.getLikeService();
             List<Product> likes = likeService.getAllFromLikes(userLogin);
-            if(likes!=null){
-                req.setAttribute("likes", likes);
+            if (likes != null) {
+                req.setAttribute(LIKES_ATTRIBUTE, likes);
                 RequestDispatcher dispatcher = req.getRequestDispatcher(LIKE_PAGE);
-                if(dispatcher!=null){
+                if (dispatcher != null) {
                     dispatcher.forward(req, resp);
                 }
+            } else {
+                resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             }
-            else{
-                HttpSession session = req.getSession();
-                session.setAttribute("error", true);
-                resp.sendRedirect("anotherPage");
-            }
-        } catch (ServiceException| ServletException | IOException e){
+        } catch (ServiceException | ServletException | IOException e) {
             throw new CommandException(e);
         }
     }

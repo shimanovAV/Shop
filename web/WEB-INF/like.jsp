@@ -12,37 +12,15 @@
     <link href="css/mainpage.css" rel="stylesheet">
 </head>
 <body>
-<section class="text-center md-4">
-    <div class="row wow fadeIn">
-        <jsp:useBean id="likes" scope="request" type="java.util.List"/>
-        <c:forEach items="${likes}" var="product" varStatus="productCount">
-        <div class="col-lg-3 col-md-6 mb-4">
-            <div class="card">
-                <div class="view overlay">
-                    <a href="FindProduct?Command=FINDPRODUCTBYID&productID=${product.id}">
-                        <img class="card-img-top" src="${product.path}"></a>
-                </div>
-                <div class="card-body text-center">
-                    <h5>
-                        <strong>
-                            <a href="#" class="dark-grey-text">${product.name}</a>
-                        </strong>
-                    </h5>
-                    <h4 class="font-weight-bold blue-text">
-                        <strong>
-                                ${product.price}
-                        </strong>
-                    </h4>
-                </div>
-            </div>
-        </div>
-        <c:if test="${productCount.count % 4 == 0}">
-    </div>
-    <div class="row wow fadeIn">
-
-        </c:if>
-        </c:forEach>
-</section>
-
+<div>
+    <jsp:include page = "/Header" flush="true"/>
+</div>
+<div class="container">
+    <jsp:useBean id="likes" scope="session" type="java.util.List"/>
+    <c:set var="all" value="${likes}" scope="session"/>
+    <jsp:include page="/allProduct.jsp"/>
+</div>
+</div>
+<script src="js/bootstrap.min.js"/>
 </body>
 </html>

@@ -15,15 +15,18 @@ import java.io.IOException;
 
 public class ChangeQuantity implements Command {
 
+    public static final String PRODUCT_ID_PARAM = "productId";
+    public static final String USER_PARAM = "user";
+    public static final String QUANTITY_PARAM = "quantity";
+
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws CommandException {
         try{
-            Basket basket = null;
+            Basket basket;
             HttpSession session = req.getSession();
-            String page = req.getParameter("page");
-            int productId = Integer.parseInt(req.getParameter("productId"));
-            User user = (User)session.getAttribute("user");
+            int productId = Integer.parseInt(req.getParameter(PRODUCT_ID_PARAM));
+            User user = (User)session.getAttribute(USER_PARAM);
+            int quantity = Integer.parseInt(req.getParameter(QUANTITY_PARAM));
             String userLogin = user.getLogin();
-            int quantity = Integer.parseInt(req.getParameter("quantity"));
             basket = new Basket(productId, userLogin, quantity);
             ServiceFactory serviceFactory = ServiceFactory.getInstance();
             BasketService basketService = serviceFactory.getBasketService();
@@ -31,9 +34,7 @@ public class ChangeQuantity implements Command {
                 BasketProduct basketProduct = new BasketProduct();
                 basketProduct.execute(req,resp);
             } else {
-
-                session.setAttribute("error", true);
-                resp.sendRedirect("anotherPage");
+                resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             }
         } catch (ServiceException | IOException e) {
             throw new CommandException(e);

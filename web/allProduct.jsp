@@ -10,18 +10,25 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/mainpage.css" rel="stylesheet">
+
+    <fmt:setLocale value="${sessionScope.language}"/>
+    <fmt:setBundle basename="resource.text" var="locale"/>
+
+    <fmt:message bundle="${locale}" key="label.menu.new" var="New"/>
+    <fmt:message bundle="${locale}" key="question.delete" var="askDelete"/>
+    <fmt:message bundle="${locale}" key="button.yes" var="yes"/>
+    <fmt:message bundle="${locale}" key="button.no" var="no"/>
 </head>
 <body>
 
 
 <section class="text-center md-4">
     <div class="row wow fadeIn">
-    <jsp:useBean id="catalog" scope="session" type="java.util.List"/>
-    <c:forEach items="${catalog}" var="product" varStatus="productCount">
+    <c:forEach items="${all}" var="product" varStatus="productCount">
             <div class="col-lg-3 col-md-6 mb-4">
                 <div class="card">
                     <div class="view overlay">
-                        <c:if test="${sessionScope.user!=null$$sessionScope.user.isAccessLevel()}" var="isLogin">
+                        <c:if test="${sessionScope.user!=null&&sessionScope.user.isAccessLevel()}" var="isLogin">
                         <button type="button" data-target="#deleteProduct"
                                 data-toggle="modal" class="dropbtn" data-dismiss="modal" title="${product.id}" >
                             <i class="fa fa-trash-o" style="color:#8d6e63"></i></button>
@@ -37,12 +44,15 @@
                             })
                         </script>
                         <a href="FindProduct?Command=FINDPRODUCTBYID&productID=${product.id}">
-                         <img class="card-img-top" src="${product.path}"></a>
+                         <img class="photo" src="${product.path}"></a>
                     </div>
                     <div class="card-body text-center">
+                        <c:if test="${product.isNew()}" var="isLogin">
+                        <span class="badge badge-pill text-danger">${New}</span>
+                        </c:if>
                         <h5>
                         <strong>
-                            <a href="#" class="dark-grey-text">${product.name}</a>
+                            <a href="FindProduct?Command=FINDPRODUCTBYID&productID=${product.id}" class="dark-grey-text">${product.name}</a>
                         </strong>
                         </h5>
                         <h4 class="font-weight-bold blue-text">
@@ -50,6 +60,9 @@
                                 ${product.price}
                             </strong>
                         </h4>
+                        <c:if test="${product.isOnSale()}" var="isLogin">
+                            <span class="badge badge-pill text-success">${product.stockName}</span>
+                        </c:if>
                     </div>
                 </div>
             </div>
@@ -64,7 +77,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Do you want to delete the product?</h3>
+                <h3>${askDelete}</h3>
                 <button type="button" class="close" data-dismiss="modal"> &times;</button>
             </div>
             <div class="modal-body">
@@ -72,9 +85,9 @@
                     <input type="hidden" name="Command" value="DeleteProduct"/>
                     <input type="hidden" name="page" value=${pageContext.request.requestURL}/>
                     <input class="productID" type="hidden" name="productID" value=""/>
-                    <input class="btn" type="submit"  value="Yes"/><br/>
+                    <input class="btn" type="submit"  value="${yes}"/><br/>
                 </form>
-                <input class="btn"  type="submit" data-dismiss="modal" value="No"/><br/>
+                <input class="btn"  type="submit" data-dismiss="modal" value="${no}"/><br/>
             </div>
         </div>
     </div>

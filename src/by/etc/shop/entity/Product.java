@@ -1,14 +1,14 @@
 package by.etc.shop.entity;
 
-import by.etc.shop.service.ServiceFactory;
-import by.etc.shop.service.like.LikeService;
-
 import java.util.Date;
 import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 public class Product {
+    private static final String NO = "no";
+    private static final String BOYS = "Boys";
+    private static final int SHIFT = 31;
+    private static final int START = 1;
     private int id;
     private String name;
     private String description;
@@ -37,7 +37,7 @@ public class Product {
         this.path = path;
     }
 
-    public Product (int id, String name, String description, String category, double price, int quantity, Date addingDate, String path) {
+    public Product(int id, String name, String description, String category, double price, int quantity, Date addingDate, String path) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -48,7 +48,7 @@ public class Product {
         this.path = path;
     }
 
-    public Product (String name, String description, String category, double price, int quantity, Date addingDate, String path) {
+    public Product(String name, String description, String category, double price, int quantity, Date addingDate, String path) {
         this.name = name;
         this.description = description;
         this.category = category;
@@ -139,17 +139,22 @@ public class Product {
     }
 
     public boolean isNew() {
-        Date today= new Date();
+        Date today = new Date();
         long diff = today.getTime() - this.addingDate.getTime();
         long days = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
-        return days<=30;
-    }
-    public boolean forBoy() {
-        return this.category.equals("Boys");
+        return days <= 3;
     }
 
-    public boolean hasLike(List<Product> likes){
-        if(likes!=null) {
+    public boolean isOnSale() {
+        return !(this.stockName == null || this.stockName.equals(NO));
+    }
+
+    public boolean forBoy() {
+        return this.category.equals(BOYS);
+    }
+
+    public boolean hasLike(List<Product> likes) {
+        if (likes != null) {
             return likes.contains(this);
         }
         return false;
@@ -164,7 +169,7 @@ public class Product {
                 Double.compare(product.price, price) == 0 &&
                 quantity == product.quantity &&
                 name.equals(product.name) &&
-                addingDate.equals(product.addingDate)&&
+                addingDate.equals(product.addingDate) &&
                 description.equals(product.description) &&
                 category.equals(product.category) &&
                 path.equals(product.path);
@@ -172,13 +177,13 @@ public class Product {
 
     @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
+        final int prime = SHIFT;
+        int result = START;
         result = prime * result + id;
-        result = prime * result + (int)price;
+        result = prime * result + (int) price;
         result = prime * result + quantity;
         result = prime * result + stockName.hashCode();
-        result = prime * result + (int)oldPrice;
+        result = prime * result + (int) oldPrice;
         result = prime * result + name.hashCode();
         result = prime * result + description.hashCode();
         result = prime * result + category.hashCode();

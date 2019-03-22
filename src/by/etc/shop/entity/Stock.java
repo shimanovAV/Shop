@@ -4,6 +4,8 @@ import java.util.Date;
 
 
 public class Stock {
+    private static final int SHIFT = 31;
+    private static final int START = 1;
     private int id;
     private String name;
     private byte percentSize;
@@ -62,19 +64,19 @@ public class Stock {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Stock stock = (Stock) o;
-        return  id == stock.id &&
+        return id == stock.id &&
                 percentSize == stock.percentSize &&
-                name.equals(stock.name)&&
+                name.equals(stock.name) &&
                 expireDate.equals(stock.expireDate);
     }
 
     @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
+        final int prime = SHIFT;
+        int result = START;
         result = prime * result + id;
         result = prime * result + name.hashCode();
-        result = prime * result + (int)percentSize;
+        result = prime * result + (int) percentSize;
         result = prime * result + expireDate.hashCode();
         return result;
     }

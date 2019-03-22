@@ -11,32 +11,29 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 public class FindProductById implements Command {
     public static final String PRODUCT_PAGE = "/Product";
-    public void execute(HttpServletRequest req, HttpServletResponse resp) throws CommandException {
-        String page = null;
+    public static final String PRODUCT_ID_PARAM = "productID";
+    public static final String PRODUCT_ATTRIBUTE = "product";
 
+    public void execute(HttpServletRequest req, HttpServletResponse resp) throws CommandException {
         try {
             ServiceFactory serviceFactory = ServiceFactory.getInstance();
             ProductService productService = serviceFactory.getProductService();
-            int productID = Integer.parseInt(req.getParameter("productID"));
+            int productID = Integer.parseInt(req.getParameter(PRODUCT_ID_PARAM));
             Product product = productService.getProductById(productID);
-            if(product!=null){
-                page=PRODUCT_PAGE;
-                req.setAttribute("product", product);
-                RequestDispatcher dispatcher = req.getRequestDispatcher(page);
+            if (product != null) {
+                req.setAttribute(PRODUCT_ATTRIBUTE, product);
+                RequestDispatcher dispatcher = req.getRequestDispatcher(PRODUCT_PAGE);
                 if (dispatcher != null) {
                     dispatcher.forward(req, resp);
                 }
-            } else{
-                HttpSession session = req.getSession();
-                session.setAttribute("error", true);
-                resp.sendRedirect("anotherPage");
+            } else {
+                resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             }
-           } catch (IOException| ServletException | ServiceException e) {
+        } catch (IOException | ServletException | ServiceException e) {
             throw new CommandException(e);
         }
     }

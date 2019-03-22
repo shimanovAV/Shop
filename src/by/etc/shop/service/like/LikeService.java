@@ -6,8 +6,9 @@ import by.etc.shop.service.ServiceException;
 
 import java.util.List;
 
-    public interface LikeService {
-        boolean changeLike(Like like) throws ServiceException;
-        List<Product> getAllFromLikes(String userLogin) throws ServiceException;
-    }
+public interface LikeService {
+    boolean changeLike(Like like) throws ServiceException;
+
+    List<Product> getAllFromLikes(String userLogin) throws ServiceException;
+}
 

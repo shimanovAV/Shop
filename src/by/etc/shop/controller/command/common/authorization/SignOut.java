@@ -1,4 +1,4 @@
-package by.etc.shop.controller.command.common;
+package by.etc.shop.controller.command.common.authorization;
 
 import by.etc.shop.controller.command.Command;
 import by.etc.shop.controller.command.CommandException;
@@ -11,16 +11,14 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 public class SignOut implements Command {
-    public static final String PAGE = "page";
+    public static final String PAGE = "/Start";
 
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws CommandException {
         HttpSession session = req.getSession(false);
-        String page = req.getParameter(PAGE);
         try {
             session.invalidate();
-            resp.sendRedirect(page);
-            //req.getRequestDispatcher(page).forward(req, resp);
-        } catch (IOException e) {
+            req.getRequestDispatcher(PAGE).forward(req, resp);
+        } catch (IOException | ServletException e) {
             throw new CommandException(e);
         }
     }

@@ -8,7 +8,10 @@ import java.util.List;
 
 public interface BasketService {
     boolean addToBasket(Basket basket) throws ServiceException;
+
     boolean deleteFromBasket(Basket basket) throws ServiceException;
+
     boolean changeQuantity(Basket basket) throws ServiceException;
+
     List<Product> getAllFromBasket(String userLogin) throws ServiceException;
 }

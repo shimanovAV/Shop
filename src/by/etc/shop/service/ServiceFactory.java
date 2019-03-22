@@ -23,26 +23,34 @@ public final class ServiceFactory {
     private final LikeService likeService = new LikeServiceImpl();
     private final OrderService orderService = new OrderServiceImpl();
 
-    private ServiceFactory(){}
-    public static ServiceFactory getInstance(){
+    private ServiceFactory() {
+    }
+
+    public static ServiceFactory getInstance() {
         return instance;
     }
-    public UserService getClientService(){
+
+    public UserService getClientService() {
         return clientService;
     }
-    public ProductService getProductService(){
+
+    public ProductService getProductService() {
         return productService;
     }
-    public StockService getStockService(){
+
+    public StockService getStockService() {
         return stockService;
     }
-    public BasketService getBasketService(){
+
+    public BasketService getBasketService() {
         return basketService;
     }
-    public LikeService getLikeService(){
+
+    public LikeService getLikeService() {
         return likeService;
     }
-    public OrderService getOrderService(){
+
+    public OrderService getOrderService() {
         return orderService;
     }
 }

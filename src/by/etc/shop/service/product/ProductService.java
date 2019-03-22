@@ -7,9 +7,14 @@ import java.util.List;
 
 public interface ProductService {
     boolean add(Product product) throws ServiceException;
+
     boolean delete(int productID) throws ServiceException;
+
     boolean update(Product product) throws ServiceException;
+
     Product getProductById(int productID) throws ServiceException;
+
     List<Product> getAll() throws ServiceException;
+
     List<Product> getAllBy(String productInfo) throws ServiceException;
 }

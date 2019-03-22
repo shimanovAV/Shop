@@ -12,7 +12,7 @@
     <link href="css/mainpage.css" rel="stylesheet">
 
     <fmt:setLocale value="${sessionScope.language}"/>
-    <fmt:setBundle basename="resources.text" var="locale"/>
+    <fmt:setBundle basename="resource.text" var="locale"/>
 
 
     <fmt:message bundle="${locale}" key="hint.add.product" var="addProduct"/>
@@ -28,11 +28,19 @@
 <body>
 
 <div>
-    <jsp:include page = "/WEB-INF/adminHeader.jsp" flush="true"/>
+    <jsp:include page = "/Header" flush="true"/>
 </div>
 
-<a class="text-right" data-target="#addproduct"
-   data-toggle="modal">${addProduct}</a>
+<div class="container">
+    <jsp:useBean id="catalog" scope="session" type="java.util.List"/>
+    <c:set var="all" value="${catalog}" scope="session"/>
+    <jsp:include page="/allProduct.jsp"/>
+</div>
+
+<button type="button" id="addButton" data-target="#addproduct"
+        data-toggle="modal">
+    <i class="fa fa-plus fa-2x"></i>
+</button>
 
 
 <div class="modal" id="addproduct">
@@ -57,7 +65,7 @@
                         <label class="btn">
                             <input type="radio" name="category" value="Girl" autocomplete="off" >${girls}
                         </label>
-                    </div>
+                    </div><br/>
                     <label>${price}</label>
                     <input type="number" name="price" step="0.01" class="form-control"/><br/>
                     <label>${quantity}</label>
@@ -71,9 +79,7 @@
     </div>
 </div>
 
-<div class="container">
-    <jsp:include page="/allProduct.jsp"/>
-</div>
+
 
 <script src="js/bootstrap.min.js"/>
 </body>

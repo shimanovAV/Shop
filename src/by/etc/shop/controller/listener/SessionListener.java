@@ -3,7 +3,6 @@ package by.etc.shop.controller.listener;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
-import java.util.Locale;
 
 public class SessionListener implements HttpSessionListener {
 

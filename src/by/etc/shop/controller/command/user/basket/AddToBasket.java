@@ -9,30 +9,29 @@ import by.etc.shop.service.basket.BasketService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 public class AddToBasket implements Command {
-    public static final String BASKET_PAGE = "/BasketProduct";
+
+
+    public static final String PRODUCT_ID_PARAM = "productId";
+    public static final String USER_ID_PARAM = "userId";
+    public static final String QUANTITY_PARAM = "quantity";
 
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws CommandException {
         try {
-            Basket basket = null;
-            String page = req.getParameter("page");
-            int productId = Integer.parseInt(req.getParameter("productId"));
-            String userId = req.getParameter("userId");
-            int quantity = Integer.parseInt(req.getParameter("quantity"));
+            Basket basket;
+            int productId = Integer.parseInt(req.getParameter(PRODUCT_ID_PARAM));
+            String userId = req.getParameter(USER_ID_PARAM);
+            int quantity = Integer.parseInt(req.getParameter(QUANTITY_PARAM));
             basket = new Basket(productId, userId, quantity);
             ServiceFactory serviceFactory = ServiceFactory.getInstance();
             BasketService basketService = serviceFactory.getBasketService();
-            if(basketService.addToBasket(basket)){
+            if (basketService.addToBasket(basket)) {
                 BasketProduct basketProduct = new BasketProduct();
-                basketProduct.execute(req,resp);
-            }
-            else{
-                HttpSession session = req.getSession();
-                session.setAttribute("error", true);
-                resp.sendRedirect("anotherPage");
+                basketProduct.execute(req, resp);
+            } else {
+                resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             }
         } catch (ServiceException | IOException e) {
             throw new CommandException(e);

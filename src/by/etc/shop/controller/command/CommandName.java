@@ -29,5 +29,8 @@ public enum CommandName {
     ORDERPRODUCT,
 
     CHANGELIKE,
-    LIKEPRODUCT;
+    LIKEPRODUCT,
+
+    NEWPRODUCTS,
+    SALEPRODUCTS;
 }

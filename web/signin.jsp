@@ -6,21 +6,15 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <fmt:setLocale value="${sessionScope.language}"/>
-    <fmt:setBundle basename="resources.text" var="locale"/>
+    <fmt:setBundle basename="resource.text" var="locale"/>
 
     <fmt:message bundle="${locale}" key="hint.login" var="login"/>
     <fmt:message bundle="${locale}" key="hint.password" var="password"/>
-    <fmt:message bundle="${locale}" key="label.language.en" var="langEn"/>
-    <fmt:message bundle="${locale}" key="label.language.ru" var="langRu"/>
+    <fmt:message bundle="${locale}" key="label.language" var="language"/>
 </head>
 <body>
 <form action="SignIn" method="post">
-    <c:if test="${sessionScope.language==\"ru\"}" var="rusLang">
-        <a href="ChangeLanguage?Command=CHANGELANGUAGE&language=en&page=${pageContext.request.requestURL}">${langEn}</a>
-    </c:if>
-    <c:if test="${rusLang==false}">
-        <a href="ChangeLanguage?Command=CHANGELANGUAGE&language=ru&page=${pageContext.request.requestURL}">${langRu}</a>
-    </c:if>
+    <ctg:language value="${language}" pageURL="${pageContext.request.requestURL}"/>
     <input type="hidden" name="Command" value="SignIn"/>
     ${login}<br/>
     <input type="text" name="login" value=""/><br/>

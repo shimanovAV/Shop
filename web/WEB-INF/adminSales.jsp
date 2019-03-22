@@ -12,7 +12,7 @@
     <link href="css/mainpage.css" rel="stylesheet">
 
     <fmt:setLocale value="${sessionScope.language}"/>
-    <fmt:setBundle basename="resources.text" var="locale"/>
+    <fmt:setBundle basename="resource.text" var="locale"/>
 
 
     <fmt:message bundle="${locale}" key="hint.add.product" var="addProduct"/>

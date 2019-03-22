@@ -15,26 +15,26 @@ import java.io.IOException;
 
 public class DeleteFromBasket implements Command {
 
+    public static final String PRODUCT_ID_PARAM = "productID";
+    public static final String PRODUCT_QUANTITY_PARAM = "productQuantity";
+    public static final String USER_PARAM = "user";
+
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws CommandException {
         try {
             Basket basket;
             HttpSession session = req.getSession();
-            String page = req.getParameter("page");
-            int productId = Integer.parseInt(req.getParameter("productID"));
-            int quantity = Integer.parseInt(req.getParameter("productQuantity"));
-            User user = (User)session.getAttribute("user");
+            int productId = Integer.parseInt(req.getParameter(PRODUCT_ID_PARAM));
+            int quantity = Integer.parseInt(req.getParameter(PRODUCT_QUANTITY_PARAM));
+            User user = (User) session.getAttribute(USER_PARAM);
             String userLogin = user.getLogin();
             basket = new Basket(productId, userLogin, quantity);
             ServiceFactory serviceFactory = ServiceFactory.getInstance();
             BasketService basketService = serviceFactory.getBasketService();
-
             if (basketService.deleteFromBasket(basket)) {
                 BasketProduct basketProduct = new BasketProduct();
-                basketProduct.execute(req,resp);
+                basketProduct.execute(req, resp);
             } else {
-
-                session.setAttribute("error", true);
-                resp.sendRedirect("anotherPage");
+                resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             }
         } catch (ServiceException | IOException e) {
             throw new CommandException(e);

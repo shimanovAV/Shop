@@ -17,22 +17,22 @@ import java.io.IOException;
 public class CancelOrder implements Command {
 
     public static final String PAGE = "/OrderPage";
+    public static final String ORDER_ID_PARAM = "orderId";
 
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws CommandException {
-        try{
+        try {
             HttpSession session = req.getSession();
             ServiceFactory serviceFactory = ServiceFactory.getInstance();
             OrderService orderService = serviceFactory.getOrderService();
-            int orderId = Integer.parseInt(req.getParameter("orderId"));
-            if(orderService.cancelOrder(orderId)){
+            int orderId = Integer.parseInt(req.getParameter(ORDER_ID_PARAM));
+            if (orderService.cancelOrder(orderId)) {
                 Catalog.CATALOG.putOrderIn(session);
                 RequestDispatcher dispatcher = req.getRequestDispatcher(PAGE);
                 if (dispatcher != null) {
                     dispatcher.forward(req, resp);
                 }
-            } else{
-                session.setAttribute("error", true);
-                resp.sendRedirect("anotherPage");
+            } else {
+                resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             }
         } catch (ServiceException | IOException | ServletException e) {
             throw new CommandException(e);
