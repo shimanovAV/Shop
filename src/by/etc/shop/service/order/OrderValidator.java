@@ -25,10 +25,14 @@ public class OrderValidator {
     }
 
     public static boolean isValid(List<Product> products) {
-        return !(products == LIST_NULL && products.size() == ZERO);
+        return !(products == LIST_NULL || products.size() == ZERO);
     }
 
     public static boolean isValid(String login) {
        return !(login == NULL || login.isEmpty());
     }
+    public static boolean isValidQuantity(int diffQuantity) {
+        return diffQuantity<0;
+    }
+
 }

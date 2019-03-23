@@ -11,6 +11,7 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 public class FindProductById implements Command {
@@ -20,12 +21,13 @@ public class FindProductById implements Command {
 
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws CommandException {
         try {
+            HttpSession session = req.getSession();
             ServiceFactory serviceFactory = ServiceFactory.getInstance();
             ProductService productService = serviceFactory.getProductService();
             int productID = Integer.parseInt(req.getParameter(PRODUCT_ID_PARAM));
             Product product = productService.getProductById(productID);
             if (product != null) {
-                req.setAttribute(PRODUCT_ATTRIBUTE, product);
+                session.setAttribute(PRODUCT_ATTRIBUTE, product);
                 RequestDispatcher dispatcher = req.getRequestDispatcher(PRODUCT_PAGE);
                 if (dispatcher != null) {
                     dispatcher.forward(req, resp);

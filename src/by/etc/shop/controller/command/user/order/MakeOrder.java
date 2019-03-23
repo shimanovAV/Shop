@@ -31,13 +31,13 @@ public class MakeOrder implements Command {
             HttpSession session = req.getSession();
             List<Product> products = (List<Product>) session.getAttribute(BASKET_PARAM);
             Date orderDate = new Date();
-            double summ = Double.parseDouble(req.getParameter(SUMM_PARAM));
+            double summ = (Double)session.getAttribute(SUMM_PARAM);
             String userId = req.getParameter(USER_ID_PARAM);
             boolean courier = Boolean.parseBoolean(req.getParameter(COURIER_PARAM));
             Order order = new Order(orderDate, summ, userId, courier);
             ServiceFactory serviceFactory = ServiceFactory.getInstance();
             OrderService orderService = serviceFactory.getOrderService();
-            req.setAttribute(NOT_ACCEPTED_ATTRIBUTE, orderService.makeOrder(order, products));
+            session.setAttribute(NOT_ACCEPTED_ATTRIBUTE, orderService.makeOrder(order, products));
             Catalog.CATALOG.putOrderIn(session);
             RequestDispatcher dispatcher = req.getRequestDispatcher(ORDER_PAGE);
             if (dispatcher != null) {

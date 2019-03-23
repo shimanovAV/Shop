@@ -208,14 +208,15 @@ public class SQLOrderDAO implements OrderDAO {
         PreparedStatement productStatement = null;
         PreparedStatement changeProductStatement = null;
         ResultSet rs;
+        boolean flag = true;
         try {
             helper.setQuery(SELECT_PRODUCT_IN_ORDER);
             productStatement = helper.getPreparedStatementManualCon();
             productStatement.setInt(1, orderId);
             rs = productStatement.executeQuery();
-            helper.setQuery(SELECT_CURRENT_QUANTITY);
-            changeProductStatement = helper.getPreparedStatementManualCon();
             while(rs.next()){
+                helper.setQuery(SELECT_CURRENT_QUANTITY);
+                changeProductStatement = helper.getPreparedStatementManualCon();
                 changeProductStatement.setInt(1, rs.getInt(1));
                 ResultSet rs1 = changeProductStatement.executeQuery();
                 if(rs1.next()){
@@ -226,7 +227,7 @@ public class SQLOrderDAO implements OrderDAO {
                     changeProductStatement.setInt(2, rs.getInt(1));
                     changeProductStatement.executeUpdate();
                 } else{
-                    throw new DAOException("There are not enough products");
+                    flag = false;
                 }
             }
 
@@ -234,7 +235,7 @@ public class SQLOrderDAO implements OrderDAO {
             delete(orderId);
             helper.commit(changeProductStatement);
             helper.commit(productStatement);
-            return true;
+            return flag;
         } catch (SQLException e) {
             helper.rollBack(changeProductStatement);
             helper.rollBack(productStatement);

@@ -1,10 +1,12 @@
 package by.etc.shop.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class Product {
+public class Product implements Serializable {
+    private static final long serialVersionUID = 625612578312780114L;
     private static final String NO = "no";
     private static final String BOYS = "Boys";
     private static final int SHIFT = 31;

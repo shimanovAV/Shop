@@ -29,7 +29,7 @@
     <fmt:message bundle="${locale}" key="button.no" var="no"/>
 </head>
 <body>
-<jsp:useBean id="product" scope="request" type="by.etc.shop.entity.Product"/>
+<jsp:useBean id="product" scope="session" type="by.etc.shop.entity.Product"/>
 <div class="container">
     <div class="container text-dark mt-5">
         <div class="row wow fadeIn">
@@ -65,10 +65,10 @@
                         </form>
                         <form class="form-group" action="ChangeLike" method="post">
                             <input type="hidden" name="Command" value="ChangeLike"/>
-                            <input type="hidden" name="page" value="${pageContext.request.requestURL}" />
+                            <input type="hidden" name="page" value="${pageContext.request.requestURI}" />
                             <input type="hidden" name="productId" value="${product.id}" />
                             <input type="hidden" name="userId" value="${sessionScope.user.login}" />
-                            <button type="submit" class="btn" style="margin-top: -60px;" >
+                            <button type="submit" style="margin-top: -60px;" >
                                 <c:if test="${product.hasLike(sessionScope.likes)}" var="isLogin">
                                 <i onclick="changeColor()" class="fa fa-heart" id="changeColor"  style="color:#8d6e63"></i></button>
                             </c:if>
@@ -85,7 +85,8 @@
                     </c:if>
 
                     <c:if test="${sessionScope.user==null}" var="isLogin">
-                        <form class="form-group" action="GoToSignIn" method="post">
+                        <c:set scope="session" value="true" var="error"></c:set>
+                        <form class="form-group" action="Product" method="post">
                             <button type="submit" class="btn">
                                 <i onclick="changeColor()" class="fa fa-heart" style="color:#e0b8a6"></i></button>
                             <input class="btn" type="submit" value="${buy}"/><br/>

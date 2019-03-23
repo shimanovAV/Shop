@@ -1,10 +1,12 @@
 package by.etc.shop.entity;
 
+import java.io.Serializable;
 import java.util.Iterator;
 import java.util.List;
 
 
-public class Basket {
+public class Basket implements Serializable {
+    private static final long serialVersionUID = 625961257831270114L;
     private static final int SHIFT = 31;
     private static final int START = 1;
     private static final double START_SUMM = 0.0;

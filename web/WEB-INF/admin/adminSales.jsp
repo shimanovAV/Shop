@@ -15,26 +15,28 @@
     <fmt:setBundle basename="resource.text" var="locale"/>
 
 
-    <fmt:message bundle="${locale}" key="hint.add.product" var="addProduct"/>
-    <fmt:message bundle="${locale}" key="hint.name" var="name"/>
-    <fmt:message bundle="${locale}" key="hint.description" var="description"/>
-    <fmt:message bundle="${locale}" key="hint.category.boys" var="boys"/>
-    <fmt:message bundle="${locale}" key="hint.category.girls" var="girls"/>
-    <fmt:message bundle="${locale}" key="hint.price" var="price"/>
-    <fmt:message bundle="${locale}" key="hint.quantity" var="quantity"/>
-    <fmt:message bundle="${locale}" key="hint.set.stock" var="setStock"/>
-    <fmt:message bundle="${locale}" key="hint.image" var="image"/>
+    <fmt:message bundle="${locale}" key="hint.add.sale" var="addSale"/>
+    <fmt:message bundle="${locale}" key="hint.sale.name" var="name"/>
+    <fmt:message bundle="${locale}" key="hint.percent.size" var="percentSize"/>
+    <fmt:message bundle="${locale}" key="hint.sale.term" var="term"/>
+    <fmt:message bundle="${locale}" key="question.delete.sale" var="deleteSale"/>
+    <fmt:message bundle="${locale}" key="button.yes" var="yes"/>
+    <fmt:message bundle="${locale}" key="button.no" var="no"/>
 </head>
-<body>
-
-<a class="text-right" data-target="#addsale"
-   data-toggle="modal">Add Sale</a>
+<body style="background: #f8f9fa;">
+<div>
+    <jsp:include page="/Header" flush="true"/>
+</div>
+<button type="button" id="addButton" data-target="#addsale"
+        data-toggle="modal">
+    <i class="fa fa-plus fa-2x"></i>
+</button>
 
 <div class="modal" id="addsale">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>${addProduct}</h3>
+                <h3>${addSale}</h3>
                 <button type="button" class="close" data-dismiss="modal"> &times;</button>
             </div>
             <div class="modal-body">
@@ -43,23 +45,23 @@
                     <input type="hidden" name="page" value=${pageContext.request.requestURL}/>
                     <label>${name}</label>
                     <input type="text" name="name" class="form-control"/><br/>
-                    <label>${quantity}</label>
+                    <label>${percentSize}</label>
                     <input class="form-control" type="number" max="100" name="percentSize"/><br/>
+                    <label>${term}</label>
                     <input type="date" name="expireDate" class="form-control"/><br/>
                     <i class="fa fa-birthday-cake fa-2x"style="color:#8d6e63"></i>
-                    <input class="btn" type="submit"  value="AddStock"/><br/>
+                    <input class="btn" type="submit"  value="${addSale}"/><br/>
                 </form>
             </div>
         </div>
     </div>
 </div>
-
-<table class="table" style="margin:0 auto 0 0">
+<table class="table" style="margin:0 auto 0 0; background:#f8f9fa;">
     <thread>
         <tr bgcolor="#ffc0cb">
-            <th>Название</th>
-            <th>Количество процентов</th>
-            <th>Истечение срока</th>
+            <th>${name}</th>
+            <th>${percentSize}</th>
+            <th>${term}</th>
             <th></th>
         </tr>
     </thread>
@@ -71,8 +73,8 @@
             <td>${stock.percentSize}</td>
             <td>${stock.expireDate}</td>
             <td><button type="button" data-target="#deleteStock"
-                    data-toggle="modal" class="dropbtn" data-dismiss="modal" title="${stock.id}" >
-                <i class="fa fa-trash-o" style="color:#8d6e63"></i></button>
+                        data-toggle="modal" class="dropbtn" data-dismiss="modal" title="${stock.id}" >
+                <i class="fa fa-trash" style="color:#8d6e63"></i></button>
             </td>
     </tr>
         </c:forEach>
@@ -91,7 +93,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Do you want to delete the product?</h3>
+                <h3>${deleteSale}</h3>
                 <button type="button" class="close" data-dismiss="modal"> &times;</button>
             </div>
             <div class="modal-body">
@@ -99,9 +101,9 @@
                     <input type="hidden" name="Command" value="DeleteStock"/>
                     <input type="hidden" name="page" value=${pageContext.request.requestURL}/>
                     <input class="stockID" type="hidden" name="stockID" value=""/>
-                    <input class="btn" type="submit"  value="Yes"/><br/>
+                    <input class="btn" type="submit"  value="${yes}"/><br/>
                 </form>
-                <input class="btn"  type="submit" data-dismiss="modal" value="No"/><br/>
+                <input class="btn"  type="submit" data-dismiss="modal" value="${no}"/><br/>
             </div>
         </div>
     </div>

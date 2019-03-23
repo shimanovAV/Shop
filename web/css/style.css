@@ -3,6 +3,7 @@ header{
 }
 .container {
     margin-top: 3.125%;
+    background: #f8f9fa;
 }
 
 a:visited {
@@ -27,7 +28,7 @@ h3 {
 }
 
 .navbar-nav > li {
-    padding-left: 5%;
+    padding-left: 10%;
     padding-right: 5%;
     text-transform: uppercase;
 }
@@ -192,6 +193,28 @@ display: inline-block;
 }
 
 .nav-link{
+    text-align: center;
+}
+
+#footer{
+    left: 0;
+    bottom: 0; /* Левый нижний угол */
+    padding: 10px; /* Поля вокруг текста */
+    background: #f8f9fa; /* Цвет фона */
+    color: #8d6e63; /* Цвет текста */
+    width: 100%; /* Ширина слоя */
+}
+.icon-photo{
+    width: 40px;
+    height: 60px;
+    text-align: center;
+    border: 0.0625em solid lightgray;
+    border-radius: 2%;
+    display: inline-block;
+}
+.small-card{
+    width: 25%;
+    margin-right: 0px;
     text-align: center;
 }
 

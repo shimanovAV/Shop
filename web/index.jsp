@@ -16,7 +16,7 @@
 <div>
   <jsp:include page = "/Header" flush="true"/>
 </div>
-<div class="container">
+<div class="container" style="background: #f8f9fa">
   <jsp:useBean id="catalog" scope="session" type="java.util.List"/>
   <c:set var="all" value="${catalog}" scope="session"/>
   <jsp:include page="/allProduct.jsp"/>

@@ -1,5 +1,6 @@
 package by.etc.shop.service.user;
 
+
 public class UserValidator {
 
     public static final String CORRECT_EMAIL = "^[\\w._\\d-]+@[A-Za-z]+.[A-Za-z]{2,3}$";
@@ -10,7 +11,8 @@ public class UserValidator {
     }
 
     public static boolean isValid(String name, String login, String password, String email) {
-        return !(!isValid(login, password) || name == null || name.isEmpty()
+        return !(!isValid(login, password) || name == null || name.isEmpty()||email == null
                 || !email.matches(CORRECT_EMAIL));
     }
+
 }

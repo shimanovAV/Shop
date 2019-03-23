@@ -48,7 +48,7 @@ public class SQLUserDAO implements UserDAO {
 
     public User signIn(String login, String password) throws DAOException {
         PreparedStatement statement = null;
-        User user = new User();
+        User user = null;
         ResultSet rs = null;
         try {
             helper.setQuery(SELECT_ALL_WITH_LOGIN_PASSWORD);
@@ -58,6 +58,7 @@ public class SQLUserDAO implements UserDAO {
             statement.setString(PASSWORD_PARAMETR, newPassword);
             rs = statement.executeQuery();
             if (rs.next()) {
+                user = new User();
                 user.setLogin(rs.getString(LOGIN_COLUMN));
                 user.setUserName(rs.getString(NAME_COLUMN));
                 user.setEmail(rs.getString(EMAIL_COLUMN));

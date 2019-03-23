@@ -57,6 +57,24 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>OrderProducts</servlet-name>
+        <jsp-file>/WEB-INF/order.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OrderProducts</servlet-name>
+        <url-pattern>/OrderProducts</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>NotAcceptedProducts</servlet-name>
+        <jsp-file>/WEB-INF/notAccepted.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NotAcceptedProducts</servlet-name>
+        <url-pattern>/NotAcceptedProducts</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>AdminOrderPage</servlet-name>
         <jsp-file>/WEB-INF/adminorder.jsp</jsp-file>
     </servlet>
@@ -93,12 +111,12 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>SalePage</servlet-name>
+        <servlet-name>Sale</servlet-name>
         <jsp-file>/WEB-INF/adminSales.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
-        <servlet-name>SalePage</servlet-name>
-        <url-pattern>/adminSales</url-pattern>
+        <servlet-name>Sale</servlet-name>
+        <url-pattern>/adminSale</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -117,15 +135,6 @@
     <servlet-mapping>
         <servlet-name>ProductPage</servlet-name>
         <url-pattern>/Product</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>SignInPage</servlet-name>
-        <jsp-file>/signin.jsp</jsp-file>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>SignInPage</servlet-name>
-        <url-pattern>/GoToSignIn</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -171,6 +180,15 @@
     <servlet-mapping>
         <servlet-name>ProductsInBasket</servlet-name>
         <url-pattern>/ProductsInBasket</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Registrate</servlet-name>
+        <jsp-file>/registrationpage.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Registrate</servlet-name>
+        <url-pattern>/Registrate</url-pattern>
     </servlet-mapping>
 
 

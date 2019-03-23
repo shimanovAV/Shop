@@ -18,7 +18,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class AddStock implements Command {
-    public static final String ADMIN_SALE_PAGE = "/adminSales";
+    public static final String ADMIN_SALE_PAGE = "/adminSale";
     public static final String NAME_PARAM = "name";
     public static final String PERCENT_SIZE_PARAM = "percentSize";
     public static final String EXPIRE_DATE_PARAM = "expireDate";

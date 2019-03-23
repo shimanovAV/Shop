@@ -3,8 +3,6 @@ package by.etc.shop.controller;
 import by.etc.shop.controller.command.Command;
 import by.etc.shop.controller.command.CommandProvider;
 
-
-import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,6 +15,13 @@ import java.io.IOException;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+/**
+ * @version 1
+ * @autor Aliaksandra Shymanovich
+ * A Controller instance handle http requests
+ * Now GET and POST methods are implemented
+ */
 
 @WebServlet({"/Relay"})
 @MultipartConfig
@@ -32,6 +37,14 @@ public class Controller extends HttpServlet {
 
     private final CommandProvider provider = new CommandProvider();
 
+    /**
+     * That method is used to
+     * handle GET requests
+     *
+     * @param req  - HttpRequest
+     * @param resp - HttpResponse
+     * @throws - IOException;
+     */
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -44,6 +57,15 @@ public class Controller extends HttpServlet {
             resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         }
     }
+
+    /**
+     * That method is used to
+     * handle POST requests
+     *
+     * @param req  - HttpRequest
+     * @param resp - HttpResponse
+     * @throws - IOException;
+     */
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {

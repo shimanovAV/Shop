@@ -1,9 +1,11 @@
 package by.etc.shop.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 
-public class Stock {
+public class Stock implements Serializable {
+    private static final long serialVersionUID = 6259612578780114L;
     private static final int SHIFT = 31;
     private static final int START = 1;
     private int id;

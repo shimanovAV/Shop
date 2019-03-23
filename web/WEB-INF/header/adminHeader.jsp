@@ -57,12 +57,13 @@
                         <a class="nav-link" href="Start">${catalog}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="adminSales">${sales}</a>
+                        <a class="nav-link" href="adminSale">${sales}</a>
                     </li>
                 </ul>
             </div>
         </nav>
         </div>
     </div>
+<hr/>
 </body>
 </html>

@@ -28,12 +28,18 @@
     <fmt:message bundle="${locale}" key="label.menu.new" var="New"/>
     <fmt:message bundle="${locale}" key="label.menu.catalog" var="catalog"/>
     <fmt:message bundle="${locale}" key="label.menu.sales" var="sales"/>
+    <fmt:message bundle="${locale}" key="error.message.wrong.password" var="wrongPassword"/>
 </head>
 <body>
 <c:if test="${sessionScope.user==null}" var="isLogin">
     <div class="container-fluid bg-light font-italic">
         <div class="top_line">
             <ctg:language value="${language}" pageURL="${pageContext.request.requestURL}"/>
+            <c:if test="${sessionScope.error==true}">
+                <strong style="color: red">
+                    ${wrongPassword}
+                </strong>
+            </c:if>
             <form action="FindProductByInfo" method="post" >
                 <input type="hidden" name="Command" value="FindProduct"/>
                 <input type="hidden" name="page" value="${pageContext.request.requestURL}" />
@@ -85,6 +91,7 @@
             </c:if>
         </c:if>
     </div>
+<hr/>
     <div class="modal" id="signin">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -95,7 +102,7 @@
                 <div class="modal-body">
                     <form class="form-group" action="SignIn" method="post">
                         <input type="hidden" name="Command" value="SignIn"/>
-                        <input type="hidden" name="page" value=${pageContext.request.requestURL}/>
+                        <input type="hidden" name="page" value=${pageContext.request.requestURI}/>
                         <i class="fa fa-user fa-2x"style="color:#8d6e63"></i> <label>${login}</label>
                         <input type="text" name="login" class="form-control"/><br/>
                         <i class="fa fa-lock fa-2x"style="color:#8d6e63"></i><label>${password}</label>

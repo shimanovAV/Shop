@@ -1,11 +1,13 @@
 package by.etc.shop.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
 
-public class Order {
+public class Order implements Serializable {
+    private static final long serialVersionUID = 625961258312780114L;
     private static final int SHIFT = 31;
     private static final int START = 1;
     private static final double START_SUMM = 0.0;

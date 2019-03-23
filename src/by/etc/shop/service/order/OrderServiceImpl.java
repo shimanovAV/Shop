@@ -21,7 +21,7 @@ public class OrderServiceImpl implements OrderService {
                 Iterator<Product> iterator = products.listIterator();
                 while (iterator.hasNext()) {
                     Product product = iterator.next();
-                    if (OrderValidator.isValid(productDAO.getQuantity(product.getId(), product.getQuantity()))) {
+                    if (OrderValidator.isValidQuantity(productDAO.getQuantity(product.getId(), product.getQuantity()))) {
                         iterator.remove();
                         notAccepted.add(product);
                     }
@@ -31,6 +31,9 @@ public class OrderServiceImpl implements OrderService {
                     order.setSumm(newSumm);
                     OrderDAO orderDAO = daoObjectFactory.getOrderDAO();
                     orderDAO.add(order, products);
+                }
+                if(notAccepted.size()==0){
+                    notAccepted = null;
                 }
                 return notAccepted;
             } else {

@@ -17,11 +17,13 @@ public class ChangeLike implements Command {
     public static final String PAGE_PARAM = "page";
     public static final String PRODUCT_ID_PARAM = "productId";
     public static final String USER_ID_PARAM = "userId";
+    public static final int BEGIN_INDEX = 0;
+    public static final int LAST_SYMBOL = 1;
 
     public void execute(HttpServletRequest req, HttpServletResponse resp) throws CommandException {
         try {
             Like like;
-            String page = req.getParameter(PAGE_PARAM);
+            String page;
             int productId = Integer.parseInt(req.getParameter(PRODUCT_ID_PARAM));
             String userId = req.getParameter(USER_ID_PARAM);
             like = new Like(productId, userId);
@@ -29,6 +31,7 @@ public class ChangeLike implements Command {
             LikeService likeService = serviceFactory.getLikeService();
             if (likeService.changeLike(like)) {
                 Catalog.CATALOG.putLikeIn(req.getSession());
+                page = req.getParameter(PAGE_PARAM);
                 resp.sendRedirect(page);
             } else {
                 resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);

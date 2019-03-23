@@ -33,7 +33,9 @@ public class BasketProduct implements Command {
             List<Product> basket = basketService.getAllFromBasket(userLogin);
             if (basket != null) {
                 session.setAttribute(BASKET_ATTRIBUTE, basket);
-                req.setAttribute(SUMM_ATTRIBUTE, Basket.countSumm(basket));
+                double sum = Basket.countSumm(basket);
+                sum = Math.floor(sum*100)/100.0;
+                session.setAttribute(SUMM_ATTRIBUTE,sum);
                 RequestDispatcher dispatcher = req.getRequestDispatcher(BASKET_PAGE);
                 if (dispatcher != null) {
                     dispatcher.forward(req, resp);

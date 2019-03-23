@@ -42,7 +42,7 @@
     <a class="icon_right" href="LikeProduct?Command=LIKEPRODUCT">
         <i class="fas fa-heart fa-2x"style="color:#8d6e63; alignment: right;"></i></a>
 
-    <a class="icon_right" href="OrderProduct">
+    <a class="icon_right" href="OrderProduct?Command=ORDERPRODUCT&user=user">
         <i class="fas fa-list-alt fa-2x"style="color:#8d6e63; alignment: right;"></i></a>
 </div>
 
@@ -74,4 +74,5 @@
     </nav>
 </div>
 </div>
+<hr/>
 </body>

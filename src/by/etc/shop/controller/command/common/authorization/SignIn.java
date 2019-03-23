@@ -26,6 +26,7 @@ public class SignIn implements Command {
     public static final String ADMIN_PAGE = "/Admin";
     public static final int BEGIN_INDEX = 0;
     public static final int LAST_SYMBOL = 1;
+    private static final String ERROR = "error";
 
     public SignIn() {
     }
@@ -40,7 +41,8 @@ public class SignIn implements Command {
         UserService clientService = serviceFactory.getClientService();
         try {
             User user = clientService.singIn(login, password);
-            if (user != null) {
+            if (user != null ) {
+                session.setAttribute(ERROR, false);
                 session.setAttribute(USER, user);
                 if (user.isAccessLevel()) {
                     RequestDispatcher dispatcher = req.getRequestDispatcher(ADMIN_PAGE);
@@ -51,11 +53,14 @@ public class SignIn implements Command {
                     Catalog.CATALOG.putLikeIn(session);
                     Catalog.CATALOG.putOrderIn(session);
                     page = req.getParameter(PAGE);
-                    page = page.substring(BEGIN_INDEX, page.length() - LAST_SYMBOL); //изменю
+                    page = page.substring(BEGIN_INDEX, page.length() - LAST_SYMBOL);
                     resp.sendRedirect(page);
                 }
             } else {
-                resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+                session.setAttribute(ERROR, true);
+                page = req.getParameter(PAGE);
+                page = page.substring(BEGIN_INDEX, page.length() - LAST_SYMBOL);
+                resp.sendRedirect(page);
             }
 
         } catch (ServiceException | IOException | ServletException e) {

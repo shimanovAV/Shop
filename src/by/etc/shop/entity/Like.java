@@ -1,6 +1,9 @@
 package by.etc.shop.entity;
 
-public class Like {
+import java.io.Serializable;
+
+public class Like implements Serializable {
+    private static final long serialVersionUID = 625961578312780114L;
 
     private static final int SHIFT = 31;
     private static final int START = 1;
